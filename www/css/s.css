@@ -1,0 +1,776 @@
+
+/*Reset Styles*/
+/*
+html, body, div, span,  h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td {
+background:transparent none repeat scroll 0%;
+border:0pt none;
+font-size:100%;
+margin:0pt;
+outline-color:invert;
+outline-style:none;
+outline-width:0pt;
+padding:0pt;
+vertical-align:baseline;
+}
+*/
+html, body{
+ font-family: verdana, sans-serif;
+ background: #06f url(../images/background.jpg) repeat-x;
+}
+body{
+ font-size: 56%;
+
+}
+
+.container_16{
+	margin: 30px auto;
+	background: white;
+        border: 1px solid #666;
+        border-width: 1px 2px 2px 1px; 
+	}
+
+.grid_13{background: white}
+
+.grid_10 { margin-bottom: 60px;}
+
+
+
+#containerbox {display: block;width: 740px; padding:0 0 20px 0; margin: 0 0 40px 300px; background: #fff; }
+#mainbox{margin: 0; padding: 0 0 50px 50px;}
+
+#logobox {
+	text-align: center;
+	background: white;
+	padding: 30px 20px 100px 20px;
+	border: 1px solid #666;
+        border-width: 1px 2px 2px 1px;
+	margin: -20px  -10px -20px -20px;
+        height: 500px;
+}
+
+#topbox{
+        background: url(../images/top.png) no-repeat transparent;
+        padding: 0;
+        margin: 0;
+        height: 38px;
+}
+#quicklinks{
+	padding:5px;
+	text-align: right;
+}
+
+
+#headerbox{margin: 30px 0 0 0; padding: 0;}
+
+
+#bottomlinks{
+	margin: 80px 0 10px 0;
+}
+
+
+.banner{margin: 0 0 0 10px;}
+
+#breadcrumb{
+	float:left;
+        width: 260px;
+        padding:5px;
+        
+}
+#breadcrumb ul{list-style: none;
+margin:0; padding:0}
+
+#breadcrumb li {
+	float: left;
+	font-size: 0.8em;
+	padding: 0 20px 0 0;
+        margin:0}
+
+
+#contentbox {
+   margin: 10px 10px;
+   width: 650px;
+   float: left;
+   }
+
+
+
+ul.hbutton, dl.hbutton {
+   width: 100%;
+   margin: 0;
+   padding: 5px 0 15px 0;
+}
+
+#menu{
+	background: blue url(../images/menu.jpg);
+	height: 33px;
+	margin: 0 -10px;
+	padding: 23px 10px 7px 10px;
+}
+
+
+#menu dl{
+	/*width: 660px;*/
+	
+	}
+#menu dd{
+	DISPLAY: inline; 
+	LIST-STYLE-TYPE: none;
+        margin:0;
+        padding:0;
+	
+}
+#menu a{
+	float: left;
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 1.2em; 
+	margin: 0 5px 0 0 ;
+	TEXT-DECORATION: none; 
+	PADDING: 3px 2px 6px 4px;
+	display: block;
+	width: 95px;
+	vertical-align: bottom;
+	height: 30px;
+	border: 1px solid #134FED;
+	border-bottom: none
+}
+#menu dd span {display:none}
+
+#menu a:link,#menu a:visited {
+	COLOR: #ccc; background: none ;
+}
+#menu a:hover,
+#menu a:active,
+.karate dd#karate a,
+.self-defence dd#self-defence a,
+.starting-karate dd#starting-karate a,
+.karate-london dd#karate-london a,
+.karate-surrey dd#karate-surrey a,
+.karate-grading dd#karate-grading a,
+.gallery dd#gallery a,
+.about dd#about a,
+a{
+	color: #fff; background: none;
+	border-color: white;
+}
+#menu a.current:link{
+	color:#fff;
+	background: none;
+}
+
+
+
+
+
+#footerbox {
+	
+	clear: both;margin: 20px 0 30px 0; }
+#linksbox{}
+#copyrightbox{margin: 60px 10px 0 0;
+                border-top: 1px solid #ccc;
+                padding-top:6px;
+                text-align: right}
+	
+
+
+.spacer {clear:both;line-height: 0; margin:0;padding:0}
+
+
+
+
+		
+		
+		
+/* ############### End Main Structure ### */
+
+
+
+
+ P {
+	FONT-SIZE: 1.3em;
+        MARGIN: 1em 0 0 0;
+        line-height: 1.6em;
+}
+ B {
+	FONT-SIZE: 12px; FONT-FAMILY: verdana, arial, helvetica, sans-serif;  TEXT-DECORATION: none
+}
+ STRONG {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;  
+}
+
+
+
+ H1 {
+	color: #05a;
+	font-weight: normal;
+	FONT-SIZE: 2.5em; 
+	MARGIN: 15px 0 10px 0; 
+}
+	
+h2 {font-size: 1.6em;
+	MARGIN: 24px 0 0 0; 
+	color: #05a;
+}
+h2 a:link {
+	font-weight: bold;
+	text-decoration: none;
+	COLOR: #666; BACKGROUND-COLOR: transparent; 
+}
+h2 a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	COLOR: #666; BACKGROUND-COLOR: transparent; 
+}
+h2 a:hover {
+COLOR: #69e; BACKGROUND-COLOR: transparent;
+	text-decoration: underline;
+	
+}
+
+
+
+
+
+ H3 {
+	FONT-SIZE: 12px; MARGIN: 18px 0 0 0; 
+}
+H4 {
+	FONT-SIZE: 10px; MARGIN: 12px 0 0 0; 
+}
+
+
+A {
+	COLOR: #127; BACKGROUND-COLOR: transparent; 
+}
+A:link {
+	COLOR: #127; BACKGROUND-COLOR: transparent
+}
+A:visited {
+	COLOR: #127; BACKGROUND-COLOR: transparent
+}
+A:hover {
+	COLOR: #ce0000; BACKGROUND-COLOR: transparent
+}
+
+
+.spacer {line-height: 0; clear: both}
+
+
+
+
+
+
+
+
+
+
+a img{
+	border: none;
+}
+.rightbar {
+	Z-INDEX: 3; LEFT: 76%; POSITION: absolute; TOP: 164px;
+	width: 180px;
+}
+TABLE {
+	MARGIN: 12px 0px 12px 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; FONT: 12px verdana, arial, helvetica, sans-serif; PADDING-TOP: 0px
+}
+OL, UL {
+	MARGIN: 0 0 20px 20px; FONT: 12px verdana, arial, helvetica, sans-serif
+}
+
+LI {
+	MARGIN:  0.5em 0 0 0;
+}
+A {
+	FONT-WEIGHT: 400;  FONT-FAMILY: verdana, arial, helvetica, sans-serif; 
+	
+}
+A:link {
+	
+}
+A:visited {
+	
+}
+A:hover {
+	
+}
+
+
+#navbox {
+        margin: 20px 0 20px 0;
+        padding: 10px 0 20px 0;
+        border: 1px dashed #ccc;
+        }
+
+
+
+
+#navbox ul{
+	margin: 0
+}
+#navbox ul li{
+	list-style:none;
+	
+}
+#navbox ul li a{
+	display: block;
+	
+	text-decoration: none;
+	font-weight: 500;
+	
+	padding: 5px 5px 5px 10px;
+	
+}
+#navbox ul li a.nav3{
+	border-top: dotted;
+}
+#navbox a#navselected{
+	font-weight: bold;
+}
+#navbox a:hover{
+	text-decoration: underline;
+	
+}
+
+
+#sitemap
+{
+margin-left: 30px;
+
+}
+
+#sitemap ul
+{
+list-style: none;
+margin-left: 0;
+padding: 0;
+border: none;
+}
+
+#sitemap li
+{
+
+margin: 20px 0 0 0;
+}
+
+#sitemap li a{
+padding: 5px 5px 5px 5px;
+
+}
+
+html>body #sitemap li a { width: auto; }
+
+#sitemap li a:hover
+{
+
+}
+
+#sitemap li li
+{
+/*border-top: 1px solid */
+margin: 5px 0 0 20px;
+}
+
+#sitemap li li a
+{
+
+text-decoration: none;
+width: 100%;
+}
+#sitemap li li li
+{
+
+margin:0 0 0 40px;
+}
+
+#sitemap li li li a
+{
+
+text-decoration: none;
+width: 100%;
+}
+.sitemaplink {
+	FONT-SIZE: 10px; TEXT-ALIGN: right
+}
+.subscribe {
+	
+	border-style: solid;
+	border-width: 1px;
+	padding: 2px;
+	margin: 0;
+	
+	
+	
+}
+.subscribe p{
+	font-size: 10px;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-left: 4px;
+	margin: 0;
+	
+}
+
+#calendar {
+
+	BORDER-RIGHT:  1px solid; PADDING-RIGHT: 3px; 
+	BORDER-TOP:  1px solid; MARGIN-TOP: 10px; PADDING-LEFT: 3px; 
+	PADDING-BOTTOM: 5px; BORDER-LEFT:  1px solid; 
+	PADDING-TOP: 5px; BORDER-BOTTOM:  1px solid; TEXT-ALIGN: center
+}
+#calendar P {
+	FONT-SIZE: 10px; LINE-HEIGHT: 12px;
+	margin: 5px 0 0 0;
+	padding: 0px
+}
+#calendar A {
+text-decoration: underline;
+}
+#calendar h2{border-top: solid 1px ; border-bottom: solid 1px ; font-size: 10px; margin: 20px -3px 0 -3px;
+FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	
+}
+
+#calendar h3{
+	 font-weight : bold; margin: 10px 0 0 0 ; font-size: 10px;
+	 FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+}
+
+.bigevent{
+FONT-SIZE: 10px; LINE-HEIGHT: 10px;
+	margin: 5px 0 0 0;
+	padding: 0px
+}
+
+
+/*
+#breadcrumb {
+display: none;
+	FONT-SIZE: 10px; MARGIN: 0; PADDING-TOP: 0px
+}
+*/
+input {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	FONT-SIZE: 12px;
+}
+TEXTAREA {
+	border-style: solid; 
+	border-width: 1px;
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	OVERFLOW: hidden;
+	FONT-SIZE: 12px;
+}
+.placeholder {
+	MARGIN-BOTTOM: 200px; WIDTH: 100px; HEIGHT: 300px
+}
+
+.form{
+	
+	
+	padding: 0 10px 5px 10px; 
+	
+	margin-top: 10px;
+
+}
+.form table, .form p{
+	margin-left: 0;
+	margin-top: 5px
+}
+
+.form  p{
+	margin-left: 0;
+}
+.search{
+	font-size: 10px;
+	text-align: center;
+	margin-top: 2px;
+	
+	
+	
+}
+
+form#contact td{
+        vertical-align:top
+}
+form#contact input.text,
+form#contact textarea{
+        width: 30em;
+        border: 1px solid #ccc
+}
+
+form#contact input.honey {display:none}
+
+
+/*----------------- EVENTS TABLE -------------------*/
+
+table.scheduled{
+	
+	border-collapse: collapse;
+	width: 100%
+}
+
+table.scheduled td{
+	padding: 5px 5px 5px 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc
+	
+}
+
+
+table.scheduled td span{
+	display: block;
+	margin-top: 2px;
+	font-size: 0.8em;
+	
+}
+
+
+
+table.scheduled td.town{
+	width: 70px;
+}
+table.scheduled td.day{
+	width: 80px;
+}
+table.scheduled td.time{
+	width: 120px;
+}
+table.scheduled td.time a{
+	font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+table.events{
+        
+        border-collapse:collapse;
+	width: 100%;
+       
+}
+
+table.events thead{
+        
+}
+
+
+table.events th, table.events td{
+        text-align:left;
+        font-size: 1em;
+        padding: 5px 11px 3px 0;
+        border: 1px dashed #ccc;
+        border-width: 1px 0;
+}
+table.events th{
+        font-size: 0.8em;
+        border:  1px solid #ccc;
+         border-width: 1px 0;
+}
+
+table.events th.col1, table.events td.col1  {
+        width: 150px;
+        
+}
+table.events td.col1 {
+        /*font-size: 0.9em;*/
+        
+}
+
+table.events  h3{margin-top:0;
+color:#05a;}
+
+
+table.events p{
+        font-size: 1em;
+        margin-top: 0.5em;
+}
+table.events ul{
+       
+        margin-bottom: 0.5em;
+}
+
+
+/********************** GALLERIES *****************************************/
+
+
+#galleries, #gallery{
+	
+	margin-top: 1em;
+	position: relative;
+	
+}
+
+#galleries div, #gallery div{
+	
+	text-align:center;
+	width: 160px;
+	height: 180px;
+	border: 1px solid #ccc;
+	float: left;
+	padding: 10px;
+	margin: 0 10px 10px 0;
+	
+}
+
+#gallery div{
+	
+	height: 160px;
+	
+	
+}
+
+
+
+/*********************** HOME PAGE ************************************************/
+
+#karate-self-defence{
+	
+	margin-top: 2em;
+	padding:0;
+	
+}
+
+#karate-self-defence #karate,
+#karate-self-defence #self-defence
+{
+	font-size: 1.4em;
+	margin: 0;
+	background: url(images/karate.png) no-repeat;
+	padding: 45px 15px 5px 12px;
+	width: 300px;
+	height: 140px;
+	display: table-cell;
+	
+}
+
+#karate-self-defence #self-defence
+{
+	
+	background: url(images/self-defence.png) no-repeat top right;
+	padding-right: 0;
+
+}
+
+#karate-self-defence #karate li,
+#karate-self-defence #self-defence li
+{
+	margin-left: 20px;
+	color: #63CCEC;
+}
+
+#karate-self-defence #karate li
+{
+	color: #000;
+}
+
+
+
+#karate-self-defence #karate a,
+#karate-self-defence #self-defence a
+{
+	font-weight: bold;
+}
+
+
+
+#karate-self-defence #self-defence a
+{
+	color: #63CCEC;
+	
+}
+
+
+#homepageevents{
+	
+	margin-top: 2em;
+	border: 1px solid #0053A4;
+	padding: 0 10px 10px 10px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#homepagenews .item{
+	
+	border: 1px dotted  #0054A5;
+	margin: 1em 0 0 0;
+	padding: 0 10px 10px 10px;
+}
+
+
+#homepagenews .item h3{
+	
+	color: #0054A5;
+	font-size: 1.4em;
+}
+
+
+
+/******************  MAPS    ***************************************************/
+
+#map{
+	width:580px;
+	height:480px;
+	margin: 1em 0;
+	border: 1px solid #0054A5
+}
+
+#message{
+	display: none;
+	position:absolute;
+	padding:10px;
+	background:#0054A5;
+	color:#fff;
+	width:100px;
+	font-size: 1.5em
+}
+
+
+
+
+
+
+table#mizu-name{
+	
+	border-collapse: collapse
+	
+}
+
+table#mizu-name td{
+	
+	padding: 5px 0 0 0;
+	line-height: 1.4em;
+	
+}
+
+table#mizu-name td.col1{
+	
+	text-align:right;
+	width: 100px;
+	padding: 5px 10px 0 0;
+	font-weight: bold;
+	color: #0054A5;
+	font-size: 1.4em;
+}

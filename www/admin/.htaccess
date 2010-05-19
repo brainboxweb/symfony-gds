@@ -1,0 +1,8 @@
+#Think these are the only lines that should be needed
+RewriteEngine On
+
+RewriteRule !(\.html|\.txt|\.xml|\.ico|\.gif|\.jpe?g|\.css|\.php|^css/.*|^images/.*|^build/.*|^js/.*|^php/.*)$ index.php [nocase,last]
+
+
+
+

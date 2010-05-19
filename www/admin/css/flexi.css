@@ -1,0 +1,290 @@
+
+
+div.optional {display: none}
+
+
+table.form{
+    border-collapse:collapse;    
+}
+
+table.form td{
+	padding: 0;
+	width: 160px;
+	/*background: #bcf;*/
+	padding: 10px;
+	/*border:2px solid white;*/
+	font-size: 9px;
+	
+	background-color:#EEEEEE;
+	
+}
+
+table.form td.col1{
+	width: 450px;
+	border-right:2px solid #F7F7F7;
+}
+table.form td.body{
+	border-top:2px solid #F7F7F7;
+}
+
+table.form td.submit{
+	text-align: right;
+	background: #fff
+}
+
+
+
+
+/*states */
+table.form td.pending,
+table.form td.active,
+table.form td.expired{
+	padding-right:0;
+}
+
+table.form td.pending{
+   /* background: url(../images/pending-big.gif) no-repeat  #f5ED06*/
+	background-color:#ffb007;
+	color:#FFFFFF;
+}
+table.form td.active{
+   /* background: url(../images/active-big.gif) no-repeat   #06e259*/
+	background-color:#1cb304;
+	color:#FFFFFF;
+}
+table.form td.expired{
+    /*background: url(../images/expired-big.gif) no-repeat  #FF5757*/
+	background-color:#ff421d;
+	color:#FFFFFF;
+}
+table.form div.optionalContainer span.hastooltip ~ div{
+	margin-top:10px;
+}
+
+table.form div.optionalContainer span.hastooltip ~ div{
+	margin-top:10px;
+}
+
+.container{
+    margin-top: 0px;
+	margin-bottom:10px;
+}
+
+
+
+.container  input.long{
+    display: block;
+    width: 440px
+}
+
+.container  input.medium{
+    display: block;
+    width: 300px
+}
+
+.container  input.short{
+    display: block;
+    width: 100px
+}
+
+.container  textarea#body{
+    display: block;
+    width: 800px;
+    height: 800px;
+    overflow-y: auto
+}
+
+.container  textarea#metaDescription{
+    display: block;
+    width: 440px;
+    height: 7em;
+
+}
+
+.container  textarea#code{
+    display: block;
+    width: 800px;
+    height: 800px;
+    overflow-y: auto
+}
+
+.hastooltip{
+    color: blue;
+    text-decoration:underline;
+	background:url(../images/more_expand_collapse.gif) no-repeat left 1px;
+	padding-left:10px;
+	cursor:pointer;
+}
+
+
+table#itemlist{
+	table-layout: fixed;
+	width: 100%;
+	margin-top: 1em;
+	border-collapse: collapse;
+	font-size: 1em;
+}
+
+table#itemlist th, table#itemlist td {
+	text-align:left;
+	/*padding: 0.2em 0.5em 0.2em 20px;*/
+	border-bottom: dotted 1px #ccc;
+	
+	/*	modifications  */
+	padding:0.4em 0.8em 0.4em 0.8em;
+}
+table#itemlist th{
+/*	font-size: 0.7em;*/
+	color: #666;
+	
+	/*	modifications  */
+	font-size: 0.9em;
+	border-bottom:1px solid #CCCCCC;
+	background-color:#F7F7F7;
+}
+table#itemlist .col1{
+}
+
+table#itemlist tr.pending td.first{
+	background: url(../images/item_pending.gif) no-repeat 5px 5px;
+}
+table#itemlist tr.active td.first{
+	background: url(../images/item_active.gif) no-repeat 5px 5px;
+}
+table#itemlist tr.expired td.first{
+	background: url(../images/item_expired.gif) no-repeat 5px 5px;
+}
+
+table#itemlist tr.expired td,
+table#itemlist tr.expired td a{
+	color:#999999;
+}
+table#itemlist tr.expired td a:hover {
+	color:#FF6600;
+}	
+
+table#itemlist th.development, table#itemlist td.development{
+    text-align: center;
+    width: 8em;
+}
+
+
+table#itemlist td.col2,table#itemlist td.col3,table#itemlist td.col4, table#itemlist th.col2,table#itemlist th.col3,table#itemlist th.col4 {
+	text-align:right;
+	width: 10%;
+}
+
+table#itemlist td.status,
+table#itemlist th.status{
+	width: 10%;
+	font-weight:bold;
+	padding-left:1em
+}
+
+table#itemlist a{
+	text-decoration: none;
+}
+
+table#itemlist th.date,
+table#itemlist td.date{
+	width: 10em;
+	text-align: right;
+}
+
+
+table#itemlist th.date,
+table#itemlist td.date{
+	width: 10em;
+	text-align: right;
+}
+
+table#itemlist .actions {
+	width:8em;
+	text-align:center;
+	font-size:0.8em;
+}
+
+table#itemlist .actions input {
+	cursor:pointer;
+}
+
+table#itemlist tbody tr.hover td {
+	background-color:#F7F7F7 !important;
+}
+
+
+
+/* For the HTML QUICKFORM bits */
+
+form table input.text{
+	width: 300px;
+/*	border: 1px solid #ccc;*/
+}
+form table textarea{
+/*  border: 1px solid #ccc;*/
+}
+
+.success{color:green; font-weight:bold}
+.error{color:red; font-weight:bold}
+
+
+table.images{
+    border-collapse:collapse; 
+}
+
+table.images td{
+	padding: 0;
+	width: 160px;
+	padding: 10px;
+	font-size: 9px;
+	background-color:#EEEEEE;
+	vertical-align:middle;
+	border-bottom:2px solid #FFFFFF;
+}
+
+table.images td.label {
+	width:80px;
+}
+
+table.images td.path {
+	width:500px;
+}
+
+table.images td.view {
+	width:180px;
+	font-size:100%;
+	text-align:right;
+}
+
+table.images td.submit {
+	background-color:#FFFFFF;
+	text-align:right;
+	width:auto;
+}
+
+table.images td.submit input {
+	float:right;
+}
+
+/* Date controls */
+
+input.date  {
+    background: transparent;
+    border: none;
+    color:white;
+    width: 70px
+    
+    }
+    
+
+    
+input#startDate, input#published  {
+    margin-left: 23px;
+}
+
+/* Event Dates */
+.startend input.date  {
+   
+    color:black;
+   
+    }
