@@ -6,21 +6,17 @@
 <?php if($metaTitle): ?>
      <?php echo $metaTitle  ?>
 <?php else: ?>
-     <?php echo $title . ' | Mizu Shotokan Karate-Do' ?>
+     <?php echo $title . ' | Gary Straughan, PHP Developer' ?>
 <?php endif ?>
 </title>
-
 
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta http-equiv="Content-Language" content="en" />
 <meta name="description" content="<?php echo $metaDescription ?>" />
 <meta name="author" content="Gary Straughan | BRAINBOX" />
-<meta name="google-site-verification" content="R0_8TKeRbHfxw0x7fsPbqG19th-sydDf1gOZkFQjjp8" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $config['basePath'] ?>css/reset.css" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $config['basePath'] ?>css/text.css" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $config['basePath'] ?>css/960.css" />
 
+<meta name="google-site-verification" content="R0_8TKeRbHfxw0x7fsPbqG19th-sydDf1gOZkFQjjp8" />
 
 
 
@@ -61,113 +57,62 @@ if($noIndex){
 <link rel="Shortcut Icon" href="/favicon.ico" />
 </head>
 <body class="<?php echo $section ?>">
-<div class="container_16">
 
-     <div class="grid_3" >
-          <div id="logobox">
-              
-               <a href="<?php echo $config['basePath'] ?>"><img src="<?php echo $config['basePath'] ?>images/logo.png"  alt="<?php echo $longName ?>" /></a>
-               <br />
-               <br />
-               <br />
-               <br />
-               Mizu Shotokan Karate-Do
-                 <br />
-               <br />
-               Sensei Clint<br /> Furlonge-Walker<br />
-              
-               5th Dan<br />
-                <br />
-               07796 331133<br />
-               
-               
-          </div>
+<div id="top">
+     <div id="header">
+
+          
+     <a href="/" id="homelink">Gary Straughan - PHP Developer</a>
+      
+ 
+      
+      <!--
+      <div id="topbox">
+           
+           <div id="breadcrumb">
+                <?php
+                if($location && isset($breadcrumbString)){
+                     
+                     echo  '<ul>' . $breadcrumbString . '</ul>';
+                }
+                ?>
+           </div>
+           
+          
+           
+           <div class="spacer">&nbsp;</div>
+           
+      </div>
+      -->
+    
+ 
+      <div id="quicklinks" class="noprint">
+          <a href="<?php echo $basePath ?>">Home</a> |
+          <!--<a href="<?php echo $basePath ?>sitemap">Site Map</a> |-->
+          <a href="<?php echo $basePath ?>contact" rel="nofollow">Contact</a>
+      </div>
+ 
+ 
+      <!-- START topnavigation -->
+      <div id="menu" class="noprint">
+           <dl>
+           <dd id="portfolio"><a href="/portfolio" >Portfolio</a></dd>
+           <dd id="about"><a href="/about" >About</a></dd>
+           </dl>
+          
+      </div>
+          
+        
      </div>
+</div>
+
+<div id="banner">
      
-     <!--
-     <div id="topbox">
-          
-          <div id="breadcrumb">
-               <?php
-               if($location && isset($breadcrumbString)){
-                    
-                    echo  '<ul>' . $breadcrumbString . '</ul>';
-               }
-               ?>
-          </div>
-          
-         
-          
-          <div class="spacer">&nbsp;</div>
-          
-     </div>
-     -->
-     
-     <!-- Start 13 column section -->
-     <div class="grid_13" >
-
-           <div id="quicklinks" class="noprint">
-               <a href="<?php echo $basePath ?>">Home</a> |
-               <!--<a href="<?php echo $basePath ?>sitemap">Site Map</a> |-->
-               <a href="<?php echo $basePath ?>contact" rel="nofollow">Contact</a>
-          </div>
-     
-
-         <!-- START topnavigation -->
-          <div id="menu" class="noprint">
-               <dl>
-              
-               <dd id="karate"><a href="/karate" >Karate Classes</a></dd>
-               <dd id="self-defence"><a href="/self-defence" >Self-defence Classes</a></dd>
-             
-               <dd id="starting-karate"><a href="/starting-karate" >Getting Started</a></dd>
-               <dd id="karate-london"><a href="/karate-london" >Karate in <br />West London</a></dd>
-               <dd id="karate-surrey"><a href="/karate-surrey" >Karate in Godalming</a></dd>
-               <dd id="karate-grading"><a href="/karate-grading" >Extra Training &amp; Grading</a></dd>
-               <!--<dd id="gallery"><a href="/gallery" >Photos</a></dd>-->
-                                
-               <dd id="about"><a href="/about" >About Mizu</a></dd>
-               </dl>
-
-
-              
-          </div>
-         
-         
-          <!-- END topnavigation -->
-         <!--
-           <div class="banner">
-               
-               <?php /*
-              # echo '<pre>';
-              # print_r($topNavArray);
-               
-               
-              # $key = array_search(array('path'=>$pathVars->section),$topNavArray);
-               #echo 'the key is' . $key;
-              # exit;
-               
-               #exit;
-               $sectionID=1; #Dwefault to the Home Page as section
-               
-               foreach($topNavArray as $name=>$value){ 
-                   
-                   if($value['path']==$pathVars->section ){
-                         $sectionID=$value['id'];
-                   }
-                   
-              }
-              #echo 'id=' . $sectionID;
-               echo '<img src="images/section/'. $sectionID . '.jpg" width="940" height="160" alt="' . $title . '"/>';
-                     */
-              ?>
-               
-              
-          </div>-->
+</div>
     
-
+<div id="main">
     
-    
+     <div id="content">
           <!--start 10 column section withn 13 column section -->
           <div class="grid_10 alpha">
           
@@ -190,11 +135,7 @@ if($noIndex){
                     #exit;
                }
                
-               if($hasMap){
-                    echo '<div id="map"></div>
-                         <div id="message" ></div>';
-               
-               }
+              
           
                ?>
           
@@ -230,58 +171,54 @@ if($noIndex){
           
           }
          
-          //if($_SERVER['REQUEST_URI'] == '/' ){
-               
-               echo '<img src="/images/little-girl.jpg" alt="Karate kid" />';
-         // }
+         
           
           
           ?>
                
           </div>
           
-          
+     </div>
+     
+</div>
               
+<div id="bottom">     
           
           
-          
-           <!-- START footer -->
-               <div id="footerbox" >
+          <!-- START footer -->
+          <div id="footer" >
                     
-                 
+               <div id="business-card">
                     
-                   <div id="copyrightbox">
-                   <?php echo $longName ?>     - London and Surrey dojos<br />
-                   
-                   Copyright &copy; 2007-<?php echo date('Y') ?> Clint Furlonge-Walker. All rights reserved. 
-                   </div>
-                  
+                    Gary Straughan<br />
+                    
+                    07834 003 110<br />
+                    
+                    81 Oxford Road South<br />
+                    <strong>London W4 3DD</strong><br />
+                    <br />
+                    
+                    
                </div>
+                    
+               <div id="copyrightbox">   
+                   
+                   Copyright &copy; 2007-<?php echo date('Y') ?> Gary Straughan. All rights reserved. 
+               </div>
+                  
+          </div>
                <!-- END footer -->
      
      
         
     </div>
     
-    
-    
-    
-    
-
-    
-    
-    
-    
-<div class="spacer">&nbsp;</div>
 </div>
-     
+    
+    
+
+
 <?php
-if($hasMap){
-     require 'views/map.php';
-}
-?>
-
-
 if(isset($jsArray)){
      echo 'here';
      foreach ($jsArray as $name=>$value){
@@ -303,7 +240,7 @@ if(isset($js)){
           </script>';
 }
 
- 
+?>
      
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
