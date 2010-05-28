@@ -31,8 +31,8 @@ Class HomePage extends NormalPage{
           
           parent::__construct($dbPDO, $pathVars, $basePath);
 	  
-	  $this->getNextEvents(1);
-	  $this->getRecentNews();
+	  //$this->getNextEvents(1);
+	  //$this->getRecentNews();
 	 
 	  
      }
