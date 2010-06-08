@@ -160,6 +160,7 @@ body{
 }
 #menu a:hover,
 #menu a:active,
+.skills dd#skills a,
 .portfolio dd#portfolio a,
 .about dd#about a
 {
@@ -835,3 +836,32 @@ table#mizu-name td.col1{
 	color: #0054A5;
 	font-size: 1.4em;
 }
+
+
+
+
+
+/********************   PORTFOLIO  **************************/
+
+
+#portfolio-list{
+	
+	width: 100%;
+	overflow: hidden;
+	
+}
+
+.portfolio-item{
+	
+	width: 290px;
+	height: 100px;
+	margin: 0 15px 15px 0;
+	padding: 0 10px 10px 10px;
+	background: #39D5EE;
+	float: left;
+	
+}
+
+
+
+
