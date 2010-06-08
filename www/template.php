@@ -92,14 +92,16 @@ if($noIndex){
       </div>
  
  
-      <!-- START topnavigation -->
-      <div id="menu" class="noprint">
-           <dl>
-           <dd id="portfolio"><a href="/portfolio" >Portfolio</a></dd>
-           <dd id="about"><a href="/about" >About</a></dd>
-           </dl>
+     <!-- START topnavigation -->
+     <div id="menu" class="noprint">
           
-      </div>
+          <dl>
+               <dd id="skills"><a href="/skills" >Skills</a></dd>
+               <dd id="portfolio"><a href="/portfolio" >Portfolio</a></dd>
+               <dd id="about"><a href="/about" >About</a></dd>
+          </dl>
+          
+     </div>
           
         
      </div>
