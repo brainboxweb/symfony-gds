@@ -14,10 +14,9 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta http-equiv="Content-Language" content="en" />
 <meta name="description" content="<?php echo $metaDescription ?>" />
-<meta name="author" content="Gary Straughan | BRAINBOX" />
+<meta name="author" content="Gary Straughan" />
 
-<meta name="google-site-verification" content="R0_8TKeRbHfxw0x7fsPbqG19th-sydDf1gOZkFQjjp8" />
-
+<meta name="google-site-verification" content="RVDyD43J9JXYhcRYLxGTMuGvRFIB_nT2_vHm74XYfzI" />
 
 
 <link href="/css/s.css" type="text/css" rel="stylesheet"  />
@@ -87,9 +86,9 @@ if($noIndex){
     
  
       <div id="quicklinks" class="noprint">
-          <a href="<?php echo $basePath ?>">Home</a> |
-          <!--<a href="<?php echo $basePath ?>sitemap">Site Map</a> |-->
-          <a href="<?php echo $basePath ?>contact" rel="nofollow">Contact</a>
+          <a href="/">Home</a> |
+          <!--<a href="/sitemap">Site Map</a> |-->
+          <a href="/contact" rel="nofollow">Contact</a>
       </div>
  
  
@@ -165,7 +164,7 @@ if($noIndex){
            <div class="grid_3 omega">
             
           <?php
-          if(   $navString   != '' ){
+          if(  isset($navString) && $navString   != '' ){
 
                echo '<div id="navbox"> ' . $navString . '</div>';
           

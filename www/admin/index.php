@@ -96,9 +96,11 @@ if($pathVars->fetchByIndex(0)!='login'){
    $navArray[]=array('title'=>'Orphans',     'path'=>'orphans');
    $navArray[]=array('title'=>'Members',     'path'=>'members');
   
-   $navArray[]=array('title'=>'Events',      'path'=>'eventsBB');
-   $navArray[]=array('title'=>'News',      'path'=>'newsBB');
-   $navArray[]=array('title'=>'Gallery',       'path'=>'gallery');
+   $navArray[]=array('title'=>'Portfolio',      'path'=>'portfolio');
+   
+  
+   
+   
    $navArray[]=array('title'=>'Users',       'path'=>'users');
    
    //$topNavString = '<dd><a href="' . $adminBasePath . '">Home</a></dd>';;
@@ -247,6 +249,29 @@ switch($pathVars->fetchByIndex(0)  ){
          echo 'NOT ALLOWED!';
       }
       break;
+   
+               
+    case ('portfolio'):
+                 
+      if ( $user->checkPermission('portfolio') ) {
+
+          if(!$_GET){
+            require_once('bb_admin/OrphanPage.php');
+            $thePage= new OrphanPage($dbPDO, $basePath);
+          }
+          else{
+               require_once('bb_admin/NavOrphanItemPage.php');
+               $thePage= new NavOrphanItemPage($dbPDO, $basePath);
+         }
+      }
+      else{
+         
+         echo 'NOT ALLOWED!';
+      }
+      break;
+      
+   
+   
       
       case ('members'):
                  
