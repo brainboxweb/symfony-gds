@@ -98,6 +98,7 @@ if($noIndex){
           <dl>
                <dd id="skills"><a href="/skills" >Skills</a></dd>
                <dd id="portfolio"><a href="/portfolio" >Portfolio</a></dd>
+               <dd id="cv"><a href="/cv" >CV</a></dd>
                <dd id="about"><a href="/about" >About</a></dd>
           </dl>
           

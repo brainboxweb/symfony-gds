@@ -146,7 +146,7 @@ body{
 	TEXT-DECORATION: none; 
 	PADDING: 18px 2px 6px 4px;
 	display: block;
-	width: 155px;
+	width: 150px;
 	text-align: center;
 	vertical-align: bottom;
 	height: 31px;
@@ -162,6 +162,7 @@ body{
 #menu a:active,
 .skills dd#skills a,
 .portfolio dd#portfolio a,
+.cv dd#cv a,
 .about dd#about a
 {
 	
@@ -853,15 +854,31 @@ table#mizu-name td.col1{
 
 .portfolio-item{
 	
-	width: 290px;
-	height: 100px;
+	width: 270px;
+	height: 160px;
 	margin: 0 15px 15px 0;
-	padding: 0 10px 10px 10px;
-	background: #39D5EE;
+	padding: 0 15px 10px 25px;
+	background: #3399cc url(images/box-w-corner.png) no-repeat;
 	float: left;
 	
 }
 
+.portfolio-item h2{
+	
+	font-size: 1.8em;
+}
 
+
+.portfolio-item a:link,
+.portfolio-item a:visited,
+.portfolio-item a:hover,
+.portfolio-item a:active
+
+
+{
+	
+	color: white;
+	
+}
 
 
