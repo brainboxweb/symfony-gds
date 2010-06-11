@@ -101,18 +101,13 @@ Class Model_Portfolio{
      *
      */
     
-    public function updateFromPOST(){
-        #print_r($data);
-        #echo '<h1>News Model class needs to be udated';
-       # exit;
-        #echo '<p>SUBTITLE IS ' . $newsItem->lastUpdate;
-        #exit;
-        #echo '<textarea rows=20 cols=100>' . $newsItem->body . '</textarea>';
-       # exit;
-       
-      
+    public function updateFromPOST($dbPDO){
         
-        $sql = "UPDATE news
+      
+        //var_dump($_POST);
+       
+        
+        $sql = "UPDATE portfolio
                 
                 SET
                 title = :title,
@@ -124,120 +119,40 @@ Class Model_Portfolio{
                 meta_title = :metaTitle,
                 meta_description = :metaDescription,
                 
-                published = :published,
-                depublish = :depublish
+                is_published = :isPublished
                 
-
                 WHERE id=:id";
         //echo $sql;
         #exit;
         
-        $stmnt = $this->dbPDO->prepare($sql);
+        $stmnt = $dbPDO->prepare($sql);
         
-        $stmnt->bindParam(':id', $id);
         
-        $stmnt->bindParam(':title', $title);
-        $stmnt->bindParam(':body', $body);
         
-        $stmnt->bindParam(':metaTitle', $metaTitle);
-        $stmnt->bindParam(':metaDescription', $metaDescription);
         
-        $stmnt->bindParam(':published', $published);
-        $stmnt->bindParam(':depublish', $depublish);    
+        
+        
+        $stmnt->bindParam(':id',        $_POST['id'] );
+        
+        $stmnt->bindParam(':title',     $_POST['title'] );
+        $stmnt->bindParam(':body',      $_POST['body'] );
+        
+        $stmnt->bindParam(':metaTitle',         $_POST['metaTitle'] );
+        $stmnt->bindParam(':metaDescription',   $_POST['metaDescription'] );
+        
+        
+        $isPublished = '0';
+        if( $_POST['isPublished'] ){
+            $isPublished = '1';
+        }
+    
+        $stmnt->bindParam(':isPublished',   $isPublished );
         
         
     
-       
-        
-         $id = '';
-        $title = ''; 
-       // $subtitle = ''; 
-        
-        $featured = '';
-        
-        //$metaTitle = ''; 
-        $metaDescription = ''; 
-        $body = ''; 
-        //$path = '';
-        $published = NULL;
-        $depublish = NULL;
-        $expire = NULL;
-        
-        
-        
-        $id = $_POST[ 'id'];
-        
-        $title = $_POST[ 'title']; 
-        $teaser = $_POST[ 'teaser']; 
-        $body = $_POST[ 'body'];
-        
-        $metaTitle = $_POST[ 'metaTitle'];
-        $metaDescription = $_POST[ 'metaDescription']; 
-        
-
-        $published = $_POST[ 'published'];
-        $depublish = $_POST[ 'depublish'];
-        $expire = $_POST[ 'expire'];
-        
-        
-     
-        
-        
-        #echo $published;
-       
-        
-        $dateArray = explode('-',$published);
-        $published = $dateArray[2] . '-' .  $dateArray[1] . '-' .$dateArray[0] ;
-        #echo $published;
-        #echo '<hr>' . strtotime($published);
-        #exit;
-        
-        
-        //New logic for depublish: Expire (the radio control) may may be NEVER or DATE
-        
-        if($expire=='never'){
-            
-            $depublish = NULL;
-        } else {
-            $dateArray = explode('-',$depublish);
-            $depublish = $dateArray[2] . '-' .  $dateArray[1] . '-' .$dateArray[0] ;
-            
-        }
-        
-        
-        
-        
-        /*
-        $image=$data['image'];
-        $alt=$data['alt'];
-        
-        
-        if(trim($data['width']) ){
-            
-            $width=$data['width'];
-        } else {
-            $width=null;
-        }
-        
-         if(trim($data['height']) ){
-            
-            $height=$data['height'];
-        } else {
-            $height=null;
-        }
-        
-        #$width=$data['width;
-        #$height=$data['height;
-        */
-       
-        #echo 'setting awkward to ' . $awkward;
-        
-        
-        
-         #echo '<hr>';
          
          
-         $this->dbPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->dbPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         try
         {
             $stmnt->execute();
@@ -249,8 +164,11 @@ Class Model_Portfolio{
             print ("getCode: ". $e->getCode() . "\n");
             print ("getMessage: ". $e->getMessage() . "\n");
         }
-        #print_r( $stmnt->ErrorInfo() ) ;
-        #exit;
+        
+        
+        
+        //print_r( $stmnt->ErrorInfo() ) ;
+        //exit;
         
         
     }
@@ -372,54 +290,25 @@ Class Model_Portfolio{
      */
     
     
-    public function addItem($title = 'New Item'){
+    public function add($dbPDO, $title = '***New Item**'){
         
-        /*
-        $path = $this->createPathfromTitle($title);
+      
+        $sql = "INSERT INTO
         
-        //Check the path is OK
-        
-        $sql = "SELECT count(*) from news where title = '$path'";
-        $stmnt = $this->dbPDO->prepare($sql);
-        $stmnt->execute();
-        $result = $stmnt->fetch();
-        
-        //Path already taken? append the date
-        if($result['count(*)'] !=0){
-            $path = $path . '-' . time();
-        }
-        */
-        // Use "NOW()" rather than an generated date to preserve the order of multiple items added as
-        // part of the same session
-        
-        $sql = "INSERT INTO news (
-                    title,
-                    published,
-                    depublish
-                    
-                    )
-                VALUES (
-                    :title,
-                   NOW(),
-                   :depublish
+                portfolio (title )
                 
-
-                    );";
+                VALUES
+                    ( :title)
+                    
+                    ";
 
         echo $sql;
 
-        $stmnt = $this->dbPDO->prepare($sql);
+        $stmnt = $dbPDO->prepare($sql);
        
         $stmnt->bindParam(':title', $title);
         
-        $stmnt->bindParam(':depublish', $depublish);
-        
-        //Publish today
-        #$published = date('Y') . '-' . date('m'). '-' . date('d');
-        //Depublish yesterday
-        $depublish = date('Y',mktime(0,0,0,date('m'),date('d')-1,date('y'))) . '-' . date('m',mktime(0,0,0,date('m'),date('d')-1,date('y'))). '-' . date('d',mktime(0,0,0,date('m'),date('d')-1,date('y')));
-     
-
+       
         try
         {
             $stmnt->execute ();
@@ -431,8 +320,8 @@ Class Model_Portfolio{
             print ("getMessage: ". $e->getMessage () . "\n");
         }
         
-        #print_r($stmnt->errorInfo()) ;
-        
+        //print_r($stmnt->errorInfo()) ;
+        //exit;
         
     }
     

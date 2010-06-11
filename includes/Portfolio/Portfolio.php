@@ -130,7 +130,7 @@ Class Portfolio {
             
             
         if(isset($data['body']))
-            $this->body = $data['body'];
+            $this->bodyRaw = $data['body'];
             
             
             //echo $this->body;
@@ -163,8 +163,11 @@ Class Portfolio {
     protected function applyBusinessRules(){
         
         //Derived parameters
+        
+    
+        
         require_once('Markdown/markdown.php');
-        $this->body=Markdown($this->body);
+        $this->body=Markdown($this->bodyRaw);
     
       
     }

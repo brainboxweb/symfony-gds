@@ -256,12 +256,12 @@ switch($pathVars->fetchByIndex(0)  ){
       if ( $user->checkPermission('portfolio') ) {
 
           if(!$_GET){
-            require_once('bb_admin/OrphanPage.php');
-            $thePage= new OrphanPage($dbPDO, $basePath);
+            require_once('AdminPages/PortfolioListPage.php');
+            $thePage= new PortfolioListPage($dbPDO);
           }
           else{
-               require_once('bb_admin/NavOrphanItemPage.php');
-               $thePage= new NavOrphanItemPage($dbPDO, $basePath);
+               require_once('AdminPages/PortfolioItemPage.php');
+               $thePage= new PortfolioItemPage($dbPDO);
          }
       }
       else{
