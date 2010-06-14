@@ -1,18 +1,18 @@
 
  
-   
-<?php foreach($this->portfolioArray as $portfolioItem ): ?>
-
-     <div class="portfolio-item">
+<div id="portfolio-list">   
+     <?php foreach($this->portfolioArray as $portfolioItem ): ?>
      
-          <h2><a href="/portfolio/<?php echo $portfolioItem->id ?>"><?php echo $portfolioItem->title ?></a></h2>
+          <div class="portfolio-item">
           
-          <?php echo $portfolioItem->metaDescription ?>
+               <h2><a href="/portfolio/<?php echo $portfolioItem->id ?>"><?php echo $portfolioItem->title ?></a></h2>
+               
+               <p><?php echo $portfolioItem->metaDescription ?></p>
+               
+               <p><a href="/portfolio/<?php echo $portfolioItem->id ?>" rel="nofollow" ">Full details...</a></p>
           
-          <p><a href="/portfolio/<?php echo $portfolioItem->id ?>" rel="nofollow" ">Full details...</a></p>
-     
-     </div>
-     
-<?php endforeach ?>
-
+          </div>
+          
+     <?php endforeach ?>
+</div>
 

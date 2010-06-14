@@ -293,7 +293,7 @@ ul.hbutton, dl.hbutton {
 	color: #05a;
 	font-weight: normal;
 	FONT-SIZE: 3.5em; 
-	MARGIN: 35px 0 10px 0; 
+	MARGIN: 35px 0 25px 0; 
 }
 	
 h2 {font-size: 1.6em;
@@ -798,7 +798,7 @@ table#mizu-name td.col1{
 
 #portfolio-list{
 	
-	width: 100%;
+	width: 960px;
 	overflow: hidden;
 	
 }
@@ -809,14 +809,22 @@ table#mizu-name td.col1{
 	height: 160px;
 	margin: 0 15px 15px 0;
 	padding: 0 15px 10px 25px;
+	color: white;
 	background: #3399cc url(images/box-w-corner.png) no-repeat;
 	float: left;
+	
+	
 	
 }
 
 .portfolio-item h2{
 	
 	font-size: 1.8em;
+}
+
+.portfolio-item p{
+	
+	font-size: 1.2em;
 }
 
 
