@@ -37,10 +37,10 @@ body{
 #banner{
 	
 	
-	height: 125px;
+	height: 115px;
 	margin: 0;
 	padding:0;
-	background: #fff url(images/banner.jpg) repeat-x 160px 0;
+	background: #fff url(images/banner.jpg) repeat-x ;
 	
 }
 #main
