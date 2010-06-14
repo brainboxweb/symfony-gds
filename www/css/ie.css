@@ -1,27 +1,19 @@
 
-
-#karate-self-defence{
 	
-	width: 100%;
+/**** Content needs to share! ***/
+
+
+#big{
+	
+	float: left;
+	width: 635px;
+	padding-right: 15px;
 	
 }
 
-#karate-self-defence #karate,
-#karate-self-defence #self-defence
-{
-        width: 270px;
-        height: 100px;
-	float: left;
-        
-        padding:  48px 5px 10px 15px;
-        
+#small{
 	
-}
-
-#karate-self-defence #self-defence
-{
-        
 	float: left;
-        padding:  48px 0px 10px 20px;
-	
+	width: 305px;
+	margin-top: 40px;
 }

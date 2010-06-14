@@ -64,10 +64,33 @@ body{
 	
 }
 
-	#content{
-		
-		padding: 0 0 50px 0;
-	}
+
+
+#content{
+	
+	padding: 0 0 50px 0;
+}
+	
+	
+	
+/**** Content needs to share! ***/
+
+
+#big{
+	
+	display:table-cell;
+	width: 635px;
+	padding-right: 15px;
+	
+}
+
+#small{
+	
+	display:table-cell;
+	width: 305px;
+}
+
+
 
 
 /*clickable logo*/
@@ -694,101 +717,29 @@ table.events ul{
 
 /*********************** HOME PAGE ************************************************/
 
-#karate-self-defence{
+
+#small dl{
 	
-	margin-top: 2em;
-	padding:0;
+	color: white;
+	background: #1D367E;
+	padding: 15px 15px 30px 15px;
+	text-align: center
 	
 }
 
-#karate-self-defence #karate,
-#karate-self-defence #self-defence
-{
+#small dt{
+	
 	font-size: 1.4em;
-	margin: 0;
-	background: url(images/karate.png) no-repeat;
-	padding: 45px 15px 5px 12px;
-	width: 300px;
-	height: 140px;
-	display: table-cell;
+	margin-top: 20px;
 	
 }
 
-#karate-self-defence #self-defence
-{
+#small dd{
 	
-	background: url(images/self-defence.png) no-repeat top right;
-	padding-right: 0;
-
-}
-
-#karate-self-defence #karate li,
-#karate-self-defence #self-defence li
-{
-	margin-left: 20px;
-	color: #63CCEC;
-}
-
-#karate-self-defence #karate li
-{
-	color: #000;
-}
-
-
-
-#karate-self-defence #karate a,
-#karate-self-defence #self-defence a
-{
+	font-size: 1.9em;
 	font-weight: bold;
+	margin-top: 5px;
 }
-
-
-
-#karate-self-defence #self-defence a
-{
-	color: #63CCEC;
-	
-}
-
-
-#homepageevents{
-	
-	margin-top: 2em;
-	border: 1px solid #0053A4;
-	padding: 0 10px 10px 10px;
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#homepagenews .item{
-	
-	border: 1px dotted  #0054A5;
-	margin: 1em 0 0 0;
-	padding: 0 10px 10px 10px;
-}
-
-
-#homepagenews .item h3{
-	
-	color: #0054A5;
-	font-size: 1.4em;
-}
-
 
 
 /******************  MAPS    ***************************************************/

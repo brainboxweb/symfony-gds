@@ -115,13 +115,12 @@ if($noIndex){
 <div id="main">
     
      <div id="content">
-          <!--start 10 column section withn 13 column section -->
-          <div class="grid_10 alpha">
-          
-
-              
+        
+          <div id="big">
                     
                <?php
+               
+               
                
               
                
@@ -162,24 +161,52 @@ if($noIndex){
                -->
               
           </div>   
-          
-          <!-- Start of 3 column section within 13 column section-->
-           <div class="grid_3 omega">
-            
-          <?php
-          if(  isset($navString) && $navString   != '' ){
-
-               echo '<div id="navbox"> ' . $navString . '</div>';
-          
-          }
-         
-         
-          
-          
-          ?>
                
-          </div>
+          <div id="small">
+            
+            
+               <?php if(!$section): ?>
+            
+                    <dl>
+                            <dt>Availability</dt>
+                            <dd>Available</dd>
+                            
+                            <dt>Perm / Contract</dt>
+                            <dd>Contract</dd>
+                            
+                            <dt>Really?</dt>
+                            <dd>Yes, Contract only</dd>
+                            
+                            <dt>Location</dt>
+                            <dd>West/Central London</dd>
+                            
+                            <dt>Preferred biz type</dt>
+                            <dd>Design Agencies</dd>
+                            
+                            <dt>Avoid like the plague</dt>
+                            <dd>Financial Companies</dd>
+                            
+                            
+                            
+                    </dl>
+                    
+               <?php endif ?>
+               
+               
+               
+               
+            
+               <?php if(  isset($navString) && $navString   != '' ) {
+                         
+                         echo '<div id="navbox"> ' . $navString . '</div>';
+                         
+                    }
+               ?>
+            
+            
+            
           
+          </div>
      </div>
      
 </div>
