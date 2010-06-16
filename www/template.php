@@ -54,6 +54,23 @@ if($noIndex){
 }
 ?>
 <link rel="Shortcut Icon" href="/favicon.ico" />
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-180453-23']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 </head>
 <body class="<?php echo $section ?>">
 
@@ -86,6 +103,7 @@ if($noIndex){
     
  
       <div id="quicklinks" class="noprint">
+          Mobile: 07834 003 110 |
           <a href="/">Home</a> |
           <!--<a href="/sitemap">Site Map</a> |-->
           <a href="/contact" rel="nofollow">Contact</a>
@@ -219,14 +237,9 @@ if($noIndex){
                     
                <div id="business-card">
                     
-                    Gary Straughan<br />
+                    Gary Straughan - 07834 003 110
                     
-                    07834 003 110<br />
-                    
-                    81 Oxford Road South<br />
-                    <strong>London W4 3DD</strong><br />
-                    <br />
-                    
+                    <span>81 Oxford Road South, London W4 3DD</span>                
                     
                </div>
                     
@@ -270,14 +283,6 @@ if(isset($js)){
 }
 
 ?>
-     
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-180453-14");
-pageTracker._trackPageview();
-</script>
+
 </body>
 </html>

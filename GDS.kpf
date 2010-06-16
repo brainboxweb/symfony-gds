@@ -4,4 +4,6 @@
 <preference-set idref="a6dd6ef8-14dc-4347-98c9-c2ac65e46e0c">
   <boolean id="import_live">1</boolean>
 </preference-set>
+<preference-set idref="a6dd6ef8-14dc-4347-98c9-c2ac65e46e0c/www/css/s.css">
+</preference-set>
 </project>
