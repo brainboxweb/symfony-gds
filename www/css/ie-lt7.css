@@ -1,0 +1,21 @@
+img, a, div 								{ behavior: url(/staticfiles/css/iepngfix/iepngfix.htc); }
+div 										{ *zoom: 1; }
+
+.black-bg 	 								{ background-color: #000; filter: alpha(opacity=80); } /* previous value = #1a1a1a */
+.transparent-50								{ background: #000; filter: alpha(opacity=50); }
+.transparent-80								{ background: #000; filter: alpha(opacity=80); } /*used for info box on 'working together'*/
+
+#logo h4,
+#logo .blue-block,
+/*WHAT WE DO / WORKING TOGETHER PAGES*/
+.item-header-box							{ overflow: hidden; }
+
+/*NAV*/
+.nav-1 li a,.nav-1 li a:visited				{ height: auto !important; }
+ 
+/*WELCOME PAGE*/
+.welcome-block div 							{ height: 250px; }
+.welcome-block h1							{ height: 58px; }
+
+/*WHAT WE DO / WORKING TOGETHER PAGES*/
+#what-we-do-surround						{ margin-top: 120px; }
