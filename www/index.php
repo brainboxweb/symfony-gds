@@ -48,6 +48,11 @@ switch($pathVars->getLocation()){
         break;
     
     
+    case 'contact':
+      
+        require_once 'ContactPage.php';
+        $thePage= new ContactPage($db, $emailDetails['contact']);        
+        break;
     
    
  

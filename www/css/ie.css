@@ -19,4 +19,11 @@
 }
 
 
+#content{
 
+   /* min height */
+    min-height:400px;
+    height: auto !important;
+    height: 400px;
+    
+}

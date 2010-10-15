@@ -2,21 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>
-
 <?php if($metaTitle): ?>
      <?php echo $metaTitle  ?>
 <?php else: ?>
-     <?php echo $title . ' | Gary Straughan, PHP Developer' ?>
+     <?php echo $title . ' | BRAINBOX' ?>
 <?php endif ?>
 </title>
 
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta http-equiv="Content-Language" content="en" />
-<meta name="description" content="<?php echo $metaDescription ?>" />
-<meta name="author" content="Gary Straughan" />
 
-<meta name="google-site-verification" content="RVDyD43J9JXYhcRYLxGTMuGvRFIB_nT2_vHm74XYfzI" />
+<meta name="description" content="<?php echo $metaDescription ?>" />
 
 
 <link href="/css/s.css" type="text/css" rel="stylesheet"  />
@@ -47,6 +44,15 @@ if(isset($css)){
 ?>
 <link href="<?php echo $config['basePath'] ?>css/styleprinter.css" type="text/css" rel="stylesheet" media="print"  />
 
+<!--[if lt IE 7]>
+     <link rel="stylesheet" href="/css/ie-lt7.css" type="text/css" media="screen, projection">
+     <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
+<![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/css/ie7.css" type="text/css" media="screen, projection"><![endif]-->
+	
+
+
+
 
 <?php
 if($noIndex){
@@ -54,8 +60,6 @@ if($noIndex){
 }
 ?>
 <link rel="Shortcut Icon" href="/favicon.ico" />
-
-
 
 <script type="text/javascript">
 
@@ -70,199 +74,150 @@ if($noIndex){
   })();
 
 </script>
-
 </head>
-<body class="<?php echo $section ?>">
+<body class="<?php echo $section?$section:'home' ?>">
 
-<div id="top">
-     <div id="header">
-
-          
-     <a href="/" id="homelink">Gary Straughan - PHP Developer</a>
-      
- 
-      
-      <!--
-      <div id="topbox">
-           
-           <div id="breadcrumb">
-                <?php
-                if($location && isset($breadcrumbString)){
-                     
-                     echo  '<ul>' . $breadcrumbString . '</ul>';
-                }
-                ?>
-           </div>
-           
-          
-           
-           <div class="spacer">&nbsp;</div>
-           
-      </div>
-      -->
-    
- 
-      <div id="quicklinks" class="noprint">
-          Mobile: 07834 003 110 |
-          <a href="/">Home</a> |
-          <!--<a href="/sitemap">Site Map</a> |-->
-          <a href="/contact" rel="nofollow">Contact</a>
-      </div>
- 
- 
-     <!-- START topnavigation -->
-     <div id="menu" class="noprint">
-          
-          <dl>
-               <dd id="skills"><a href="/skills" >Skills</a></dd>
-               <dd id="portfolio"><a href="/portfolio" >Portfolio</a></dd>
-               <dd id="cv"><a href="/cv" >CV</a></dd>
-               <dd id="about"><a href="/about" >About</a></dd>
-          </dl>
-          
-     </div>
-          
-        
-     </div>
-</div>
-
-<div id="banner">
+<div id="container">
      
-</div>
-    
-<div id="main">
-    
-     <div id="content">
-        
-          <div id="big">
-                    
-               <?php
+     <div id="header">
+	  
+	  <a href="/"><img src="/images/logo.png" width="347" height="82" alt="Gary Straughan - PHP Developer" /></a>
+	  
+	  <dl id="topnav">
                
-               
-               
-              
-               
-               if(isset($contentString)){
-                    
-                    if(strtolower($title) != ''){ 
-                    
-                         echo '<h1>' . $title. '</h1>';
-                    }
-                    // echo '<textarea rows=100 cols=100>' . $contentString . '</textarea>';
-                    
-                    eval('?>' . $contentString);
-                    #exit;
-               }
-               
-              
-          
-               ?>
-          
+          <dd class="skills"><a href="/skills" >Skills</a></dd>
+               <dd class="portfolio"><a href="/portfolio" >Portfolio</a></dd>
+               <dd class="cv"><a href="/cv" >CV</a></dd>
+               <dd class="about"><a href="/about" >About</a></dd>
 
-
-
+	       
+	  </dl>
+	  
+	  
+	  <div id="quicklinks">
+	       <a href="/">HOME</a>&nbsp; |  &nbsp;<a href="/contact">CONTACT</a>
+	  </div>
+	  
+	    
+     </div>
+     
+     
+     <div id="main">
+	  
+          
+	  
+	  <div id="content">
+               <?php  if( $pathVars->getLocation() ): ?>
+                    <h1><?php echo $title ?></h1>
+	       <?php endif; ?>
+               
+               
+               
+               <?php echo $contentString ?>
+          
+	  </div>
+          
+		   <?php if(!$section): ?>
+			   
+			   
+			   <dl id="availability">
+					   <dt>Availability</dt>
+					   <dd>Not Available</dd>
+					   
+					   <dt>Next Available</dt>
+					   <dd>Jan 2011</dd>
+					   
+					   <dt>Current Project</dt>
+					   <dd>Details to follow</dd>
+					   
+					  
+			   </dl>
+			   
+			   
+			<!--
+			   <dl id="availability">
+					   <dt>Availability</dt>
+					   <dd>Available</dd>
+					   
+					   <dt>Perm / Contract</dt>
+					   <dd>Contract</dd>
+					   
+					   <dt>Really?</dt>
+					   <dd>Yes, Contract only</dd>
+					   
+					   <dt>Location</dt>
+					   <dd>West/Central London</dd>
+					   
+					   <dt>Preferred biz type</dt>
+					   <dd>New Media</dd>
+					   
+					   <dt>Avoid like the plague</dt>
+					   <dd>Financial Companies</dd>
+					   
+			   </dl>
+			   -->
+                    
+          <?php endif ?>
           
           
+          <div id="navigation">
+                <?php echo $navString ?>
+               
                <!--
-                <div id="bottomlinks">
+               <div style="background: #EFC845">
                     
-                    <a href="#">Top</a> | 
-                    <a href="<?php echo $config['basePath'] ?>" rel="nofollow">Home</a>
-                    
-                    | <a href="<?php echo $config['basePath'] ?>sitemap" rel="nofollow">Site Map</a> 
-                    
-                    | <a href="<?php echo $config['basePath'] ?>contact" rel="nofollow">Contact</a>
-                    
-                    | <a href="<?php echo $config['basePath'] ?>accessibility" rel="nofollow">Accessibility</a>
+                    [[ A weber opt-in... or a video... or something ]]
                     
                </div>
                -->
-              
-          </div>   
-               
-          <div id="small">
-            
-            
-               <?php if(!$section): ?>
-            
-                    <dl>
-                            <dt>Availability</dt>
-                            <dd>Available</dd>
-                            
-                            <dt>Perm / Contract</dt>
-                            <dd>Contract</dd>
-                            
-                            <dt>Really?</dt>
-                            <dd>Yes, Contract only</dd>
-                            
-                            <dt>Location</dt>
-                            <dd>West/Central London</dd>
-                            
-                            <dt>Preferred biz type</dt>
-                            <dd>Design Agencies</dd>
-                            
-                            <dt>Avoid like the plague</dt>
-                            <dd>Financial Companies</dd>
-                            
-                            
-                            
-                    </dl>
-                    
-               <?php endif ?>
-               
-               
-               
-               
-            
-               <?php if(  isset($navString) && $navString   != '' ) {
-                         
-                         echo '<div id="navbox"> ' . $navString . '</div>';
-                         
-                    }
-               ?>
-            
-            
-            
-          
+                
           </div>
+	  
+	  
      </div>
-     
+
+
+
+
+
+
 </div>
-              
-<div id="bottom">     
-          
-          
-          <!-- START footer -->
-          <div id="footer" >
-                    
-               <div id="business-card">
-                    
-                    Gary Straughan - 07834 003 110
-                    
-                    <span>81 Oxford Road South, London W4 3DD</span>                
-                    
-               </div>
-                    
-               <div id="copyrightbox">   
-                   
-                   Copyright &copy; 2007-<?php echo date('Y') ?> Gary Straughan. All rights reserved. 
-               </div>
-                  
-          </div>
-               <!-- END footer -->
+
+
+<div id="footer">
+	  
+     <div>
+	  
+	  <p>
+	       <a href="/">Home</a>&nbsp; |
+	       &nbsp;<a href="/contact">Contact</a>&nbsp;<!-- 
+	       &nbsp;<a href="/">Terms and conditions</a>&nbsp; | 
+	       &nbsp;<a href="/">Privacy policy</a> -->
+	  </p>
      
      
-        
-    </div>
-    
+            
+	  <p>
+		  
+	       <strong>Gary Straughan - 07834 003 110</strong><br />
+	       81 Oxford Road South, Chiswick, London W4&nbsp;3DD<br />
+	       Copyright &copy; 2002-<?php echo date('Y') ?> Gary Straughan. All rights reserved.
+	  </p>
+     
+     
+     </div>
+	  
+	  
 </div>
-    
+
+
+
+
     
 
 
 <?php
 if(isset($jsArray)){
-     echo 'here';
      foreach ($jsArray as $name=>$value){
           
           if(strstr($value,'http:') ){
@@ -286,3 +241,5 @@ if(isset($js)){
 
 </body>
 </html>
+
+
