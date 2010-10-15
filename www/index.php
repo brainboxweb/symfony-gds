@@ -51,7 +51,7 @@ switch($pathVars->getLocation()){
     case 'contact':
       
         require_once 'ContactPage.php';
-        $thePage= new ContactPage($db, $emailDetails['contact']);        
+        $thePage= new ContactPage($dbPDO, $emailDetails['contact']);        
         break;
     
    

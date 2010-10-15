@@ -6,21 +6,21 @@ Class ContactPage extends Page{
 
      //NEEDS WORK!!!!
 
-     function ContactPage(& $db, $emailDetails){
+     function ContactPage($dbPDO, $emailDetails){
             
 						//echo 'here';
 						
-						$this->db=& $db;
+						$this->dbPDO= $dbPDO;
 						//$this->menuID=$menuID;
 			
 							
   			    //$emailDetails=$emailDetails['contact'];
             //print_r($emailDetails);
             
-            require_once('forms/ContactForm.php');
+            require_once('ContactFormSheila.php');
             
             //set up the form
-            $form=new ContactForm($db,$emailDetails);
+            $form=new ContactFormSheila($dbPDO,$emailDetails);
             
             if(!$form->validate()){
                  
