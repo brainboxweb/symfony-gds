@@ -3,27 +3,18 @@
 /**** Content needs to share! ***/
 
 
-#big{
-	
-	float: left;
-	width: 555px;
-	padding-right: 15px;
-	
-}
-
-#small{
-	
-	float: left;
-	width: 230px;
-	margin-top: 40px;
-}
 
 
 #content{
+	
+	float: left;
+	
+}
 
-   /* min height */
-    min-height:400px;
-    height: auto !important;
-    height: 400px;
-    
+#availablity,
+#navigation{
+	
+	float:left;
+	 width: 240px;
+	
 }
