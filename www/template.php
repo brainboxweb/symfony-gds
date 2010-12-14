@@ -16,7 +16,7 @@
 <meta name="description" content="<?php echo $metaDescription ?>" />
 
 
-<link href="/css/s.css" type="text/css" rel="stylesheet"  />
+<link href="/css/s.css?10-12" type="text/css" rel="stylesheet"  />
 <!--[if lt IE 8]>
 <link rel="stylesheet" type="text/css" media="all" href="/css/ie.css" />
 <![endif]-->
