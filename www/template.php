@@ -5,7 +5,7 @@
 <?php if($metaTitle): ?>
      <?php echo $metaTitle  ?>
 <?php else: ?>
-     <?php echo $title . ' | BRAINBOX' ?>
+     <?php echo $title . ' | Gary Straughan' ?>
 <?php endif ?>
 </title>
 
@@ -36,22 +36,7 @@ if(isset($css)){
      echo '</style>';
 }
 
-
-
-
-
-
 ?>
-<link href="<?php echo $config['basePath'] ?>css/styleprinter.css" type="text/css" rel="stylesheet" media="print"  />
-
-<!--[if lt IE 7]>
-     <link rel="stylesheet" href="/css/ie-lt7.css" type="text/css" media="screen, projection">
-     <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
-<![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/css/ie7.css" type="text/css" media="screen, projection"><![endif]-->
-	
-
-
 
 
 <?php
@@ -117,50 +102,53 @@ if($noIndex){
           
 	  </div>
           
-		   <?php if(!$section): ?>
+		   
 			   
-			   
-			   <dl id="availability">
-					   <dt>Availability</dt>
-					   <dd>Not Available</dd>
-					   
-					   <dt>Next Available</dt>
-					   <dd>Jan 2011</dd>
-					   
-					   <dt>Current Project</dt>
-					   <dd>Details to follow</dd>
-					   
-					  
-			   </dl>
-			   
-			   
-			<!--
-			   <dl id="availability">
-					   <dt>Availability</dt>
-					   <dd>Available</dd>
-					   
-					   <dt>Perm / Contract</dt>
-					   <dd>Contract</dd>
-					   
-					   <dt>Really?</dt>
-					   <dd>Yes, Contract only</dd>
-					   
-					   <dt>Location</dt>
-					   <dd>West/Central London</dd>
-					   
-					   <dt>Preferred biz type</dt>
-					   <dd>New Media</dd>
-					   
-					   <dt>Avoid like the plague</dt>
-					   <dd>Financial Companies</dd>
-					   
-			   </dl>
-			   -->
-                    
-          <?php endif ?>
-          
+			
+         
           
           <div id="navigation">
+			   
+			   
+			   <?php if(!$section): ?>
+					<dl id="availability">
+							  
+							<dt>Availability</dt>
+							<dd>Not Available</dd>
+							
+							<dt>Next Available</dt>
+							<dd>Jan 2011</dd>
+							
+							<dt>Current Project</dt>
+							<dd>Details to follow</dd>
+							
+					</dl>
+					<!--
+					<dl id="availability">
+							<dt>Availability</dt>
+							<dd>Available</dd>
+							
+							<dt>Perm / Contract</dt>
+							<dd>Contract</dd>
+							
+							<dt>Really?</dt>
+							<dd>Yes, Contract only</dd>
+							
+							<dt>Location</dt>
+							<dd>West/Central London</dd>
+							
+							<dt>Preferred biz type</dt>
+							<dd>New Media</dd>
+							
+							<dt>Avoid like the plague</dt>
+							<dd>Financial Companies</dd>
+							
+					</dl>
+					-->
+                    
+			    <?php endif ?>
+          
+			   
                 <?php echo $navString ?>
                
                <!--
