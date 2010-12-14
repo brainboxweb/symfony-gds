@@ -1,8 +1,11 @@
 
+#main{
 	
-/**** Content needs to share! ***/
+	/* clear floats */
+    overflow: hidden;
+    width: 100%;
 
-
+}
 
 
 #content{
@@ -14,6 +17,6 @@
 #navigation{
 	
 	float:left;
-	 width: 240px;
+	width: 240px;
 	
 }
