@@ -121,7 +121,7 @@ if($noIndex){
 							<dd>Jan 2011</dd>
 							
 							<dt>Current Project</dt>
-							<dd>Details to follow</dd>
+							<dd>British Gas</dd>
 							
 					</dl>
 					<!--
