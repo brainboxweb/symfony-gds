@@ -5,12 +5,13 @@
      
           <div class="portfolio-item">
           
-               <h2><a href="/portfolio/<?php echo $portfolioItem->id ?>"><?php echo $portfolioItem->title ?></a></h2>
+               <h2><?php echo $portfolioItem->title ?></h2>
                
-               <p><?php echo $portfolioItem->metaDescription ?></p>
-               
-               <p><a href="/portfolio/<?php echo $portfolioItem->id ?>" rel="nofollow">Full details...</a></p>
-          
+               <div>
+                    <p><?php echo $portfolioItem->metaDescription ?></p>
+                    
+                    <p>More on <a href="/portfolio/<?php echo $portfolioItem->id ?>"><?php echo $portfolioItem->title ?></a>...</p>
+               </div>
           </div>
           
      <?php endforeach ?>

@@ -60,6 +60,16 @@ if($noIndex){
   })();
 
 </script>
+
+
+
+
+<!-- for hide-on-load -->
+<script type="text/javascript">
+var elements = document.getElementsByTagName("html");
+elements[0].className += " js-enabled";
+</script>
+
 </head>
 <body class="<?php echo $section?$section:'home' ?>">
 
@@ -202,6 +212,11 @@ if($noIndex){
 
 
 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+ 
+    
     
 
 

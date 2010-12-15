@@ -48,6 +48,7 @@ Class PortfolioPage extends NormalPage{
      
      function getList(){
           
+		  $this->jsArray = array('portfolio.js');
 
           $this->title  = 'Portfolio';
           //$this->description

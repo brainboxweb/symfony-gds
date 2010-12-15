@@ -93,6 +93,8 @@ $code=	            $thePage->code;
 $noIndex =          $thePage->noIndex; 
 
 $cssArray=          $thePage->cssArray;
+
+$jsArray=          $thePage->jsArray;
 $noIndex=           $thePage->noIndex;
 
 

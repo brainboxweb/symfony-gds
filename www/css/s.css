@@ -2,9 +2,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /*
  
- #1858C3 - the blue
- #FFCD11 - the yelllow
- #C5D0FB - the purple
+ #1858C3 - the blue??
+ #FFCD11 - the yellow??
+ #4941A6 - the purple
 
 */
 
@@ -423,41 +423,38 @@ dl#availability {
             font-weight: bold;
            
       }
+     
+     
+     
       
-      
-      
-      #portfolio-list {
-overflow:hidden;
-width:960px;
-}
-      
-      
-.portfolio-item {
-background:url("images/box-w-corner.png") no-repeat scroll 0 0 #46569F;
-color:white;
-float:left;
-height:156px;
-margin:0 15px 15px 0;
-padding:15px 15px 10px 15px;
-width:270px;
-}      
 
-.portfolio-item a{color:#fff}
-
-      .portfolio-item h2 a:link,
-      .portfolio-item h2 a:visited
-      {text-decoration: none}
-
-.portfolio-item h2 {
-font-size:1.1em;
-margin-top:0;
-
-}
     
-.portfolio-item p {
-font-size:1.0em;
-color: #fff
-}
+#portfolio-list{}
+
+
+      #portfolio-list h2{
+            margin: 0;  /*This is important for the animation */
+            padding: 5px;
+            color: white;
+            background: none  #4941A6 ;
+      }
+    
+      .js-enabled .portfolio-item div{
+            
+            display: none;
+      }
+    
+      .portfolio-item{
+            
+            margin-bottom: 20px;
+      }
+            
+            .portfolio-item div{
+            
+                  margin: 0;
+                  width: 700px;/*This is important for the animation */
+            }     
+    
 
 
 
