@@ -273,12 +273,12 @@ h1, h2, h3
 
     h2{
         margin: 1.8em 0 0.8em 0;
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
 
     h3{
         margin-top: 1.8em;
-        font-size: 1.4em
+        font-size: 1.2em
     }
 
 
@@ -288,7 +288,7 @@ p, ul, ol, td
     font-size: 1.1em;
     margin:.7em 0 0 0;
     line-height: 1.3em;
-    color: #666;
+    color: #333;
 }
 
 li
@@ -318,7 +318,7 @@ li
     padding: 0 5px 5px 0;
 }
 
-#contact #honey{
+form .honey{
     visibility: hidden;
 }
 
@@ -405,10 +405,13 @@ table.web-design{
     
     
 dl#availability {
-      background:none #1D367E;
+      background:none #4941A6;
       color:white;
       padding: 0 15px 15px 15px;
       text-align:center;
+      
+      -moz-border-radius: 10px;
+      border-radius: 10px;
 }
 
       dl#availability dt{
