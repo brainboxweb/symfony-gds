@@ -128,7 +128,7 @@ elements[0].className += " js-enabled";
 							<dd>Not Available</dd>
 							
 							<dt>Next Available</dt>
-							<dd>Jan 2011</dd>
+							<dd>25 April 2011</dd>
 							
 							<dt>Current Project</dt>
 							<dd>British Gas</dd>
