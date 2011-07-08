@@ -23,7 +23,7 @@ Class Model_Portfolio{
     public function getAll($dbPDO){
         
          
-        $sql = "SELECT * FROM portfolio";
+        $sql = "SELECT * FROM portfolio ORDER BY sortorder";
                 
                 
        
