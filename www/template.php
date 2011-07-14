@@ -122,20 +122,21 @@ elements[0].className += " js-enabled";
 			   
 			   
 			   <?php if(!$section): ?>
-			   <!--
+			   
 					<dl id="availability">
 							  
 							<dt>Availability</dt>
 							<dd>Not Available</dd>
 							
 							<dt>Next Available</dt>
-							<dd>25 April 2011</dd>
+							<dd>September 2011?</dd>
 							
 							<dt>Current Project</dt>
-							<dd>British Gas</dd>
+							<dd>Digital Agency, Central London</dd>
 							
 					</dl>
-					-->
+					
+                    <!--
 					<dl id="availability">
 							<dt>Availability</dt>
 							<dd>Available</dd>
@@ -156,7 +157,7 @@ elements[0].className += " js-enabled";
 							<dd>Financial Companies</dd>
 							
 					</dl>
-					
+					->
                     
 			    <?php endif ?>
           
