@@ -8,10 +8,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/app/example", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        $projects = $this->getDoctrine()
+            ->getRepository('AppBundle:Project')
+            ->findBy(array(), array('publishedAt'=>'ASC'), 5)
+        ;
+
+        return $this->render('default/index.html.twig', array(
+            'projects' => $projects
+        ));
     }
 }

@@ -1,3 +1,61 @@
+
+Customisations 
+=====
+
+... on top of Symfony Standard Edition and (mostly) in accordance with:
+
+* http://symfony.com/doc/current/best_practices/templates.html
+
+
+Doctrine entity
+--
+
+* src/AppBundle/Entity/Project.php
+
+Doctrine Fixtures
+---
+
+Created (initial) fixtures file: 
+
+* src/AppBundle/DataFixtures/ORM/LoadProjectData.php
+
+* composer require "doctrine/doctrine-fixtures-bundle"
+
+* php app/console doctrine:fixtures:load
+
+
+Controller
+--
+
+* src/AppBundle/Controller/DefaultController.php
+
+Routing - for \ - provided by annotation:
+
+```php
+   /**
+     * @Route("/", name="homepage")
+     */
+    public function indexAction()
+    {
+    ...
+    }
+```
+
+
+Template
+---
+
+Basic template added here (NB - NOT in the bundle):
+
+ * app/Resources/views/default/index.html.twig
+
+
+
+
+
+
+
+
 Symfony Standard Edition
 ========================
 
@@ -67,3 +125,7 @@ Enjoy!
 [11]: http://symfony.com/doc/2.6/cookbook/logging/monolog.html
 [12]: http://symfony.com/doc/2.6/cookbook/assetic/asset_management.html
 [13]: http://symfony.com/doc/2.6/bundles/SensioGeneratorBundle/index.html
+
+
+
+
