@@ -64,6 +64,14 @@ Twig extension:
 
 
 
+Front End
+--
+
+Keeping it simple with Skeleton. css installed to web/ as per best practice.
+ 
+For live, this is required:
+ 
+* php app/console assetic:dump 
 
 
 Symfony Standard Edition
