@@ -25,7 +25,22 @@ class LoadProjectData implements FixtureInterface
         $project->setid(2);
         $project->setTitle('Senior PHP Developer - Sportlobster');
         $project->setSlug('sportlobster');
-        $project->setContent('');
+
+
+        $content = <<<EOD
+
+This is a bit of Markdown
+
+* A bulleted list
+* a second list item
+
+
+
+EOD;
+
+
+
+        $project->setContent($content);
         $project->setPublishedAt(new \DateTime('2014-12-01'));
 
         $manager->persist($project);

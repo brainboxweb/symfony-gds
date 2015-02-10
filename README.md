@@ -50,7 +50,17 @@ Basic template added here (NB - NOT in the bundle):
  * app/Resources/views/default/index.html.twig
 
 
+Markdown support
 
+* composer require erusev/parsedown
+
+Wrapper:
+
+* src/AppBundle/Utils/Markdown.php
+
+Twig extension:
+
+* src/AppBundle/Twig/AppExtension.php
 
 
 

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Get in touch</h1>
+
+    {{ form_start(form, {'attr': {'class': 'my-form-class'} }) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Contact" class="btn btn-default pull-right" />
+    {{ form_end(form) }}
+
+{% endblock %}

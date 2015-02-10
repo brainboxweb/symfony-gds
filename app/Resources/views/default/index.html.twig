@@ -7,7 +7,7 @@
     {% for project in projects %}
 
         <h3>{{ project.title }}</h3>
-        <p>{{ project.content }}</p>
+        <p>{{ project.content|md2html }}</p>
 
     {%  endfor %}
 
