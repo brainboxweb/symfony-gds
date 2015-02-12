@@ -1,0 +1,13 @@
+{% extends 'base_skeleton.html.twig' %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="six columns">
+                {{ page.body|md2html }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

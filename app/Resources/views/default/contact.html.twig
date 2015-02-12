@@ -1,11 +1,29 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_skeleton.html.twig' %}
+
+{% block title %}Get in touch{% endblock %}
 
 {% block body %}
-    <h1>Get in touch</h1>
+    <div class="container">
+        <div class="row">
+            <div class="six columns">
+                <p>Get in touch via <strong>LinkedIn</strong>...</p>
 
-    {{ form_start(form, {'attr': {'class': 'my-form-class'} }) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Contact" class="btn btn-default pull-right" />
-    {{ form_end(form) }}
+                <ul><li><a href="http://uk.linkedin.com/in/garystraughan/">uk.linkedin.com/in/garystraughan/</a></li></ul>
 
+                <p>... or send me a message via the form.</p>
+
+                <p>If all else fails, leave me a message:</p>
+
+                <ul><li>07834 003 110</li></ul>
+
+
+            </div>
+            <div class="six columns"">
+                {{ form_start(form, {'attr': {'class': 'my-form-class'} }) }}
+                {{ form_widget(form) }}
+                <input type="submit" value="Contact" class="button button-primary pull-right" />
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
 {% endblock %}

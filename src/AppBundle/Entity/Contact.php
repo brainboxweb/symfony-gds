@@ -31,7 +31,7 @@ class Contact
     /**
     * @ORM\Column(type="text")
     */
-    private $content;
+    private $message;
 
     /**
     * @ORM\Column(type="datetime")
@@ -96,17 +96,17 @@ class Contact
     /**
      * @return mixed
      */
-    public function getContent()
+    public function getMessage()
     {
-        return $this->content;
+        return $this->message;
     }
 
     /**
-     * @param mixed $content
+     * @param mixed $message
      */
-    public function setContent($content)
+    public function setMessage($message)
     {
-        $this->content = $content;
+        $this->message = $message;
     }
 
     /**

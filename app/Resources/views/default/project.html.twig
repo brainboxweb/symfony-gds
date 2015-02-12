@@ -1,0 +1,42 @@
+{% extends 'base_skeleton.html.twig' %}
+
+{% block metatitle %}{{ project.company }}{% endblock %}
+{% block title %}{{ project.company }}{% endblock %}
+
+{% block body %}
+<div class="section project">
+    <div class="container">
+        <div class="row">
+            <div class="seven columns">
+                {{ project.content|md2html }}
+            </div>
+
+            <div class="one column"></div>
+
+            <div class="four columns">
+                <table class="u-full-width">
+                    <tbody>
+                    <tr>
+                        <td>Company</td>
+                        <td>{{ project.company }}</td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                        <td>{{ project.role }}</td>
+                    </tr>
+                    <tr>
+                        <td>Start</td>
+                        <td>{{ project.startDate|date("M Y") }}</td>
+                    </tr>
+                    <tr>
+                        <td>End</td>
+                        <td>{{ project.endDate|date("M Y") }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

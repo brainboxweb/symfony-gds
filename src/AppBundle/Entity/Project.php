@@ -22,7 +22,17 @@ class Project
     /**
     * @ORM\Column(type="string")
     */
-    private $title;
+    private $company;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $url;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $role;
 
     /**
     * @ORM\Column(type="string")
@@ -30,20 +40,29 @@ class Project
     private $slug;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $summary;
+
+    /**
     * @ORM\Column(type="text")
     */
     private $content;
 
     /**
-    * @ORM\Column(type="datetime")
+    * @ORM\Column(type="date")
     */
-    private $publishedAt;
+    private $startDate;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $endDate;
 
 
     public function __construct()
     {
-//        $this->publishedAt = new \DateTime();
-//    $this->comments = new ArrayCollection();
+
     }
 
     /**
@@ -65,17 +84,49 @@ class Project
     /**
      * @return mixed
      */
-    public function getTitle()
+    public function getCompany()
     {
-        return $this->title;
+        return $this->company;
     }
 
     /**
-     * @param mixed $title
+     * @param mixed $company
      */
-    public function setTitle($title)
+    public function setCompany($company)
     {
-        $this->title = $title;
+        $this->company = $company;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param mixed $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+
+    /**
+     * @return mixed $role
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param mixed $role
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
     }
 
     /**
@@ -97,6 +148,22 @@ class Project
     /**
      * @return mixed
      */
+    public function getSummary()
+    {
+        return $this->summary;
+    }
+
+    /**
+     * @param mixed $summary
+     */
+    public function setSummary($summary)
+    {
+        $this->summary = $summary;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getContent()
     {
         return $this->content;
@@ -113,17 +180,32 @@ class Project
     /**
      * @return mixed
      */
-    public function getPublishedAt()
+    public function getStartDate()
     {
-        return $this->publishedAt;
+        return $this->startDate;
     }
 
     /**
-     * @param mixed $publishedAt
+     * @param mixed $startDate
      */
-    public function setPublishedAt($publishedAt)
+    public function setStartDate($startDate)
     {
-        $this->publishedAt = $publishedAt;
+        $this->startDate = $startDate;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
+    }
+
+    /**
+     * @param mixed $endDate
+     */
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+    }
 }

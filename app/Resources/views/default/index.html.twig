@@ -1,18 +1,48 @@
 {% extends 'base_skeleton.html.twig' %}
 
-{% block body %}
-    <h1>Gary Straughan - Symfony2 Contractor</h1>
+{% block metatitle %}Gary Straughan - Senior PHP / Symfony2 Developer - London{% endblock %}
+{% block title %}
+    PHP + Symfony2 + Contract + Agile + London = Gary&nbsp;Straughan
+    <br />
+    <a class="button button-primary" href="{{ path('contact') }}">Get in touch</a>
 
-    <h2>Recent Projects</h2>
-    <div class="value-props row">
-
-    {% for project in projects %}
-        <div class="four columns value-prop">
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.content|md2html }}</p>
-        </div>
-    {%  endfor %}
-    </div>
+    <p><span>Available mid-February 2015</span></p>
 
 {% endblock %}
 
+{% block navigation %}{% endblock %}
+
+{% block body %}
+
+    <div class="section projects">
+        <div class="container">
+            <div class="row">
+                {% for project in projects %}
+                    <div class="four columns value-prop center">
+                        <img src="/images/logos/{{ project.slug }}.png" />
+                        <p><strong>{{ project.company }}</strong> - {{ project.summary }} <a href="{{ path('projects', {'slug': project.slug}) }}">More...</a></p>
+                    </div>
+                {%  endfor %}
+            </div>
+            <div class="row center">
+                <a class="button button-primary" href="{{ path('projects', {'slug': null}) }}">View all projects</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section skills">
+        <div class="container">
+            <div class="row">
+                {% for skill in skills %}
+                    <div class="three columns">
+                        <h4>{{ skill.title }}</h4>
+                        <p>{{ skill.content }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row center">
+                <a class="button button-primary" href="{{ path('approach', {'slug': null}) }}">How I work</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

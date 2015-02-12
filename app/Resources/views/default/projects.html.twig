@@ -1,0 +1,23 @@
+{% extends 'base_skeleton.html.twig' %}
+
+{% block metatitle %}Projects - BBC, British Gas, Google, IntuDigital{% endblock %}
+{% block title %}Projects{% endblock %}
+
+{% block body %}
+
+<div class="section projects">
+    <div class="container">
+        {% for row in projects|batch(3, '') %}
+            <div class="row">
+                {% for project in row %}
+                    <div class="four columns">
+                        <h4><a href="{{ path('projects', {'slug': project.slug}) }}">{{ project.company }}</a></h4>
+                        <p>{{ project.summary }}</p>
+                    </div>
+                {%  endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
