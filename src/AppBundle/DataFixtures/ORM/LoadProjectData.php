@@ -4,6 +4,7 @@ namespace AppBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use AppBundle\Entity\Project;
+use AppBundle\Entity\Page;
 
 class LoadProjectData implements FixtureInterface
 {
@@ -242,6 +243,63 @@ EOD;
 
 
 
+        $page = new Page();
+        $page->setSlug('approach');
+        $page->setTitle('How I work');
+        $body = <<<EOD
+
+As a contractor, I don't always get to choose how I work. So this more how I *like to* work.
+
+Two things make all the difference:
+
+* Agile
+* Testing
+
+Agile
+---
+
+I've been lucky enough to work with Agile experts (such as Agile Kev). I've seen first hand how radical the
+change in quality and quantity of output can be.
+
+And I've also seen there are many ways to "do Agile". Each team is different, and each this team
+
+
+
+Test
+----
+
+The difference between being *in control of the code* and the code *being in control of you* is a good set of *Tests*.
+
+(Uncle Bob expresses this so much better than I ever could.)
+
+When developing from scratch, PHPUnit is my tool of choice.
+
+I recently had the experience of dealing with a particularly *un*-testable code base. Abandoning Units Test, we turned
+to *Behat*.
+
+
+
+EOD;
+        $page->setBody($body);
+        $manager->persist($page);
+
+
+
+
+        $page = new Page();
+        $page->setSlug('about_this_website');
+        $page->setTitle('Senior PHP/Symfony2 Developer');
+        $body = file_get_contents('README.md');
+        $page->setBody($body);
+        $manager->persist($page);
+
+
+
+        $page = new Page();
+        $page->setSlug('contact_thanks');
+        $page->setTitle('Contact');
+        $page->setBody('Thank you for your message.');
+        $manager->persist($page);
 
 
         $manager->flush();

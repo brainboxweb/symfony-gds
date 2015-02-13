@@ -1,35 +1,75 @@
 
-Customisations 
-=====
 
-... on top of Symfony Standard Edition and (mostly) in accordance with:
+In October 2014, Sensio [introduced] [1] a set of [Best Practices for Symfony] [2].
 
-* http://symfony.com/doc/current/best_practices/templates.html
+This website was built as an excuse to work-through the Best Practices.
 
 
-Doctrine entity
---
+Starting point: Symfony Standard Edition
+-----
 
-* src/AppBundle/Entity/Project.php
 
-Doctrine Fixtures
+Default config:
+
+  * A bundle: AppBundle
+  * Twig template engine;
+  * Doctrine ORM/DBAL
+  * Swiftmailer
+  * Annotations enabled for everything
+
+Included bundles:
+
+  * FrameworkBundle
+  * SensioFrameworkExtraBundle
+  * DoctrineBundle
+  * TwigBundle
+  * SecurityBundle
+  * SwiftmailerBundle
+  * MonologBundle
+  * AsseticBundle
+  * WebProfilerBundle
+  * SensioDistributionBundle
+  * SensioGeneratorBundle
+
+
+Bundles
 ---
 
-Created (initial) fixtures file: 
+Just one bundle only: **AppBundle**
+
+
+Configuration
+---
+
+* Infrastructure-related config options held in  **app/config/parameters.yml**
+* Application behavior-related config options held in **app/config/config.yml**
+
+
+Services
+---
+
+Services defined with **YAML**
+
+
+Persistence Layer - Doctrine
+----
+
+* `composer require "doctrine/doctrine-fixtures-bundle"`
+
+Annotations used to define the mapping information of the Doctrine entities.
+
+Doctrine Fixtures:
 
 * src/AppBundle/DataFixtures/ORM/LoadProjectData.php
 
-* composer require "doctrine/doctrine-fixtures-bundle"
-
-* php app/console doctrine:fixtures:load
+* `php app/console doctrine:schema:update --force`
+* `php app/console doctrine:fixtures:load`
 
 
 Controller
---
+-----
 
-* src/AppBundle/Controller/DefaultController.php
-
-Routing - for \ - provided by annotation:
+Annotations to configure routing, caching and security. Eg. for routing (in DefaultController):
 
 ```php
    /**
@@ -42,15 +82,17 @@ Routing - for \ - provided by annotation:
 ```
 
 
-Template
+
+
+Templates
 ---
 
-Basic template added here (NB - NOT in the bundle):
+Templates live here (NB - *not* in the bundle):
 
  * app/Resources/views/default/index.html.twig
 
 
-Markdown support
+Adding **Markdown** support
 
 * composer require erusev/parsedown
 
@@ -65,13 +107,26 @@ Twig extension:
 
 
 Front End
---
+-----
 
-Keeping it simple with Skeleton. css installed to web/ as per best practice.
+Keeping it simple with [Skeleton] [3]. css installed to web/ as per best practice.
+
  
-For live, this is required:
+For **prod** environment, run this:
  
-* php app/console assetic:dump 
+* `php app/console assetic:dump` 
+
+
+
+
+
+  [1]: http://symfony.com/blog/introducing-the-official-symfony-best-practices "Introducing the Official Symfony Best Practices"
+  [2]: http://symfony.com/doc/current/best_practices/index.html "Symfony Best Practices"
+  [3]: http://getskeleton.com/ "Skeleton: Responsive CSS Boilerplate"
+
+
+
+============
 
 
 Symfony Standard Edition

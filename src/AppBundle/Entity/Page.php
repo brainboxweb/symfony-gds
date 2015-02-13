@@ -10,7 +10,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 */
 class Page
 {
-
     /**
     * @ORM\Id
     * @ORM\GeneratedValue
@@ -22,6 +21,13 @@ class Page
     * @ORM\Column(type="string")
     */
     private $title;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $slug;
+
+
 
     /**
     * @ORM\Column(type="text")
@@ -63,6 +69,22 @@ class Page
     /**
      * @return mixed
      */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param mixed $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getBody()
     {
         return $this->body;
@@ -75,7 +97,5 @@ class Page
     {
         $this->body = $body;
     }
-
-
 
 }

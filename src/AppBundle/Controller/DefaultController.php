@@ -36,6 +36,18 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/page/{slug}", name="page")
+     */
+    public function pageAction($slug)
+    {
+        $page = $this->getDoctrine()
+            ->getRepository('AppBundle:Page')
+            ->findOneBy(array('slug' => $slug));
+
+        return $this->render('default/page.html.twig', array('page' => $page));
+    }
+
+    /**
      * @Route("/projects/{slug}", defaults={"slug" = null}, name="projects")
      */
     public function projectsAction($slug = null)
@@ -80,33 +92,13 @@ class DefaultController extends Controller
             $this->sendMail($contact);
 
             return $this->redirect($this->generateUrl(
-                'contact-thanks'
+                'page', array('slug' => 'contact_thanks')
             ));
         }
 
         return $this->render('default/contact.html.twig', array(
             'form' => $form->createView(),
         ));
-    }
-
-    /**
-     * @Route("/contact-thanks", name="contact-thanks")
-     */
-    public function contactThanksAction(Request $request)
-    {
-        $page = array();
-        $page['title'] = 'Contact';
-        $page['body'] = 'Thank you for your message.';
-
-        return $this->render('default/page.html.twig', array('page' => $page));
-    }
-
-    /**
-     * @Route("/approach", name="approach")
-     */
-    public function approachAction(Request $request)
-    {
-        return $this->render('default/contact-thanks.html.twig');
     }
 
     private function sendMail(Contact $contact)
@@ -118,33 +110,13 @@ class DefaultController extends Controller
             ->setTo('gary@garystraughan.com')
             ->setBody(
                 $this->renderView(
-                // app/Resources/views/Emails/registration.html.twig
                     'email/contact.html.twig',
                     array('contact' => $contact)
                 ),
                 'text/html'
             )
-            /*
-             * If you also want to include a plaintext version of the message
-            ->addPart(
-                $this->renderView(
-                    'Emails/registration.txt.twig',
-                    array('name' => $name)
-                ),
-                'text/plain'
-            )
-            */
         ;
-        $result = $mailer->send($message);
-
-//        var_dump($result);
-//        exit;
-
-
+        $mailer->send($message);
     }
-
-
-
-
 
 }

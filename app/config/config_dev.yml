@@ -41,6 +41,11 @@ monolog:
         #    type:   chromephp
         #    level:  info
 
+doctrine:
+    dbal:
+        dbname:   "gds"
+
+
 assetic:
     use_controller: true
 
