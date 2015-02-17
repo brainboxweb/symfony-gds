@@ -5,9 +5,12 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Contact;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Form\ContactType;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class DefaultController extends Controller
@@ -99,6 +102,15 @@ class DefaultController extends Controller
         return $this->render('default/contact.html.twig', array(
             'form' => $form->createView(),
         ));
+    }
+
+
+    /**
+     * @Route("/admin")
+     */
+    public function adminAction()
+    {
+        return new Response('Admin page!');
     }
 
     private function sendMail(Contact $contact)
