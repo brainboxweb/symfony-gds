@@ -206,6 +206,18 @@ Helped improve the speed and robustness of the Sportlobster API through:
 
 * Behaviour Drive Development (BDD) - Behat / Test Driven Development (TTD) - PHPUnit
 * Caching - memcached
+
+Technologies:
+--
+* Dev environment: Vagrant
+* Frameworks: Silex, Symfony2
+* Test: Behat for BDD, PHPUnit for TDD
+* Data store: MySQL, MongoDB,
+* Cache: Memcache
+
+
+
+
 EOD;
         $project->setContent($content);
         $project->setStartDate(new \DateTime('2014-02-01'));
@@ -233,7 +245,13 @@ Achievements
 
 Technologies:
 --
-* Elasticsearch, Content Repository, PrestaCMS, Memcache, Varnish, ESI
+* Dev environment: Vagrant
+* Frameworks: Symfony2
+* Test: Behat for BDD, phpspec for TDD
+* Data stores: Elasticsearch, Content Repository,
+* Cache: Memcache, Varnish, ESIs
+
+
 EOD;
         $project->setContent($content);
         $project->setStartDate(new \DateTime('2014-10-01'));
@@ -243,39 +261,65 @@ EOD;
 
 
 
+
+
+
         $page = new Page();
         $page->setSlug('approach');
-        $page->setTitle('How I work');
+        $page->setTitle('How I (like to) work');
         $body = <<<EOD
 
-As a contractor, I don't always get to choose how I work. So this more how I *like to* work.
+As a contractor, I don't always get to choose how I work.
 
-Two things make all the difference:
+Here are the things that make the difference in a software development team (in no particular order):
 
-* Agile
-* Testing
 
-Agile
+Vagrant Up
 ---
 
-I've been lucky enough to work with Agile experts (such as Agile Kev). I've seen first hand how radical the
-change in quality and quantity of output can be.
+My two favourite words in the english language are “vagrant up”.
 
-And I've also seen there are many ways to "do Agile". Each team is different, and each this team
+I‘m terrible at system configuration. It just doesn’t interest me. As a result, setting up a development environments take me an age. It's a recipe for a very, very uncomfortable start to a new contracting.
+
+**Vagrant** removes the pain and suffering. Thank you, [Mitchell Hashimoto] [1].
+
+
+Write Tests
+---
+
+[Uncle Bob] [2] describes the way that developers become frightened of their code: frightened to change anything in case something breaks.
+
+How can the developer overcome this fear and regain control? By writing tests.
+
+For unit tests, my tool of choice is **PHPUnit**. Or **phpspec**.
+
+For BDD, it has to be **Behat**.
+
+
+Work with a Framework
+---
+
+A framework does not guarantee good quality code: I’ve seen some horrible code built on top of good frameworks. (And beautiful code built on no framework at all.)
+
+Used wisely, a framework can help a group of developers play nicely together.
+
+
+Be Agile
+---
+
+I've been lucky enough to work with Agile experts (such as [Agile Kev] [2]). I've seen first hand how that Agile can radically the change the quality and quantity of output.
+
+I’ve worked in **Scrum** teams. I’ve worked in **Kanban** teams. Here’s what I’ve learned:
+* Scrum done well beats Kanban done badly.
+* Kanban done well beats Scrum done badly.
+
+And most importantly:
+* Agile can be done in many ways. It’s up to each team to select the aspects that work for them.
 
 
 
-Test
-----
-
-The difference between being *in control of the code* and the code *being in control of you* is a good set of *Tests*.
-
-(Uncle Bob expresses this so much better than I ever could.)
-
-When developing from scratch, PHPUnit is my tool of choice.
-
-I recently had the experience of dealing with a particularly *un*-testable code base. Abandoning Units Test, we turned
-to *Behat*.
+[1}: http://mitchellh.com/
+[2]: http://itkanban.com/author/agilekev/
 
 
 

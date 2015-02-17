@@ -12,7 +12,7 @@ Starting point: Symfony Standard Edition
 Default config:
 
   * A bundle: AppBundle
-  * Twig template engine;
+  * Twig template engine
   * Doctrine ORM/DBAL
   * Swiftmailer
   * Annotations enabled for everything
@@ -82,8 +82,6 @@ Annotations to configure routing, caching and security. Eg. for routing (in Defa
 ```
 
 
-
-
 Templates
 ---
 
@@ -115,8 +113,6 @@ Keeping it simple with [Skeleton] [3]. css installed to web/ as per best practic
 For **prod** environment, run this:
  
 * `php app/console assetic:dump` 
-
-
 
 
 

@@ -44,6 +44,8 @@ monolog:
 doctrine:
     dbal:
         dbname:   "gds"
+        user:     "gds"
+        password: "123"
 
 
 assetic:

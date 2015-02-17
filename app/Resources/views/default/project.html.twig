@@ -1,10 +1,11 @@
 {% extends 'base_skeleton.html.twig' %}
 
 {% block metatitle %}{{ project.company }}{% endblock %}
+{% block metadescription %}{{ project.summary }}{% endblock %}
 {% block title %}{{ project.company }}{% endblock %}
 
 {% block body %}
-<div class="section project">
+    <div class="section project">
     <div class="container">
         <div class="row">
             <div class="seven columns">
