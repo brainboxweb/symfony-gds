@@ -25,7 +25,7 @@ class LoadProjectData implements FixtureInterface
         $content = <<<EOD
 
 
-Assisted with the migration of the catalogue functionality from procedural to (OO) / MVC
+Assisted with the migration of the catalogue functionality from procedural code to Object Oriented / Model-View-Controller
 EOD;
         $project->setContent($content);
         $project->setStartDate(new \DateTime('2008-01-01'));
@@ -45,7 +45,11 @@ EOD;
         $project->setSlug('google');
         $project->setSummary('Led the development of a portal website: Nakheel Communities');
         $content = <<<EOD
-Led the development of a portal website: Nakheel Communities
+
+
+
+Led the development of a portal website: Nakheel Communities. The project borrowed heavily from a
+Content Management System that I had developed for *Brainbox*.
 EOD;
         $project->setContent($content);
         $project->setStartDate(new \DateTime('2008-03-01'));
@@ -64,9 +68,8 @@ EOD;
         $project->setSlug('google');
         $project->setSummary('Assisted with the delivery of a Career Development Portal for Google HR');
         $content = <<<EOD
-http://www.google.com/
 
-Assisted with the delivery of a Career Development Portal for Google HR.
+Assisted with the delivery of a Career Development Portal for Google Human Resources.
 
 * Created functional specifications, system specifications, and working prototypes
 * Liaised with third parties in Eire (business psychologists) and India (offshore developers)
@@ -92,7 +95,7 @@ EOD;
 Brought in to assist with the integration of a third party system with British Gas systems (Java).
 
 Close liaison with Cambridge-based AlertMe - http://www.alertme.com/ - to determine detailed functionality
- and fit with the requirements of British Gas
+ and fit with the requirements of British Gas.
 
 EOD;
         $project->setContent($content);
@@ -111,7 +114,7 @@ EOD;
         $content = <<<EOD
 Development of http://www.mediatrust.org/, a CodeIgniter-based website.
 
-* Created forms for the Column Idol competition (in association with The Sun newspaper)
+* Created forms for the **Column Idol** competition (in association with The Sun newspaper)
 * Extended the back-end functionality to match volunteers to charities
 
 EOD;
@@ -271,7 +274,7 @@ EOD;
 
 As a contractor, I don't always get to choose how I work.
 
-Here are the things that make the difference in a software development team (in no particular order):
+Here are the things (in no particular order) that tend to make all the difference:
 
 
 Vagrant Up
@@ -318,7 +321,7 @@ And most importantly:
 
 
 
-[1}: http://mitchellh.com/
+[1]: http://mitchellh.com/
 [2]: http://itkanban.com/author/agilekev/
 
 
