@@ -22,7 +22,7 @@ class DefaultController extends Controller
     {
         $projects = $this->getDoctrine()
             ->getRepository('AppBundle:Project')
-            ->findBy(array('slug' => array('intu_digital','sportlobster', 'bbc_worldwide')), array('startDate'=>'DESC') )
+            ->findBy(array('slug' => array('economist', 'intu_digital', 'bbc_worldwide')), array('startDate'=>'DESC') )
         ;
 
         $skills = array();

@@ -2,19 +2,34 @@
 
 {% block metatitle %}Projects - BBC, The Economist, Google{% endblock %}
 {% block metadecription %}I've been lucky enough to be apart of some amazing projects for a some well-known organisations.{% endblock %}
+{% block body_class %}projects{% endblock %}
 
-{% block title %}Projects{% endblock %}
+{% block title %}<h1 class="title">Projects</h1>{% endblock %}
 
 {% block body %}
 
 <div class="section projects">
     <div class="container">
-        {% for row in projects|batch(3, '') %}
+        {% for row in projects|batch(3) %}
             <div class="row">
                 {% for project in row %}
-                    <div class="four columns">
-                        <h4><a href="{{ path('projects', {'slug': project.slug}) }}">{{ project.company }}</a></h4>
-                        <p>{{ project.summary }}</p>
+                    <div class="one-third column">
+                        <a href="{{ path('projects', {'slug': project.slug}) }}">
+                            <img src="/images/logos/{{ project.slug }}.png" alt="{{ project.company }}"  />
+                            <p class="date">
+                                {% if project.endDate %}
+                                    {% if project.startDate|date("Y") == project.endDate|date("Y") %}
+                                        {{ project.startDate|date("M") }}-{{ project.endDate|date("M Y") }}
+                                    {% else %}
+                                        {{ project.startDate|date("M Y") }} - {{ project.endDate|date("M Y") }}
+                                    {% endif %}
+                                {% else %}
+                                    {{ project.startDate|date("M Y") }} to date
+                                {% endif %}
+                            <p>
+                                {{ project.summary }}
+                            </p>
+                        </a>
                     </div>
                 {%  endfor %}
             </div>

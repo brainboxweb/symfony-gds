@@ -2,19 +2,18 @@
 
 {% block metatitle %}{{ project.company }}{% endblock %}
 {% block metadescription %}{{ project.summary }}{% endblock %}
-{% block title %}{{ project.company }}{% endblock %}
+{% block body_class %}project{% endblock %}
+{% block title %}<h1 class="title">{{ project.company }}</h1>{% endblock %}
+
 
 {% block body %}
     <div class="section project">
     <div class="container">
         <div class="row">
-            <div class="seven columns">
-                {{ project.content|md2html }}
+            <div class="one-half column">
+                    {{ project.content|default('Details to follow.')|md2html }}
             </div>
-
-            <div class="one column"></div>
-
-            <div class="four columns">
+            <div class="one-half column datasheet">
                 <table class="u-full-width">
                     <tbody>
                     <tr>
@@ -31,7 +30,11 @@
                     </tr>
                     <tr>
                         <td>End</td>
-                        <td>{{ project.endDate|date("M Y") }}</td>
+                        {% if project.endDate %}
+                            <td>{{ project.endDate|date("M Y") }}</td>
+                        {% else %}
+                            <td>to date</td>
+                        {% endif %}
                     </tr>
                     </tbody>
                 </table>

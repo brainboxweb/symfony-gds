@@ -81,9 +81,10 @@
     right: 5px;
     bottom: 5px;
     left: 5px; }
-.navbar {
-    display: none; }
-
+.navbar li{
+    font-size: 1.2rem;
+    list-style: none;
+    line-height: 1; }
 
 .center {
     text-align:center;
@@ -251,12 +252,42 @@
 }
 
 
+body.home h2 {
+    text-align: center;
+}
+
+body.home h3 {
+    font-size: 2rem;
+}
+
+body.projects  h2 {
+    font-size: 2rem;
+}
+
+body.projects .date {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom:1rem;
+
+}
+
+body.projects .projects a {
+    text-decoration: none;
+    color: #000;
+}
+
+body.projects .projects a:hover {
+   text-decoration: underline;
+    color: #0FA0CE;
+}
+
+
 .header span {
     font-size: 2.4rem;
 }
 
 .footer {
-    margin-top: 5rem;
+    margin-top: 20rem;
     background: #ddd;
 }
 
@@ -272,3 +303,13 @@
 }
 
 
+.project .datasheet {
+    color: #fff;
+    background-image: url('/images/backgrounds/blue-tech.jpg');
+}
+
+.project .datasheet td {
+    padding-left: 5px;
+    padding-right: 2px;
+
+}

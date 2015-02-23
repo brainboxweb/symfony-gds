@@ -36,11 +36,20 @@
 
 
 </head>
-<body>
+<body class="{% block body_class %}home{% endblock %}">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+        ga('create', 'UA-180453-23', 'auto');
+        ga('send', 'pageview');
+
+    </script>
     <section class="header">
         <div class="container">
-            <h1 class="title">{% block title %}Title{%  endblock %}</h1>
+            {% block title %}<h1 class="title">Title</h1>{% endblock %}
         </div>
     </section>
 
@@ -49,12 +58,14 @@
     <div class="navbar-spacer"></div>
     <nav class="navbar">
         <div class="container">
-            <ul class="navbar-list">
-                <li class="navbar-item"><a class="navbar-link" href="{{ path('homepage') }}">Home</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="{{ path('projects', {'slug': null}) }}" data-popover="#codeNavPopover">Projects</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="{{ path('contact') }}">Contact</a></li>
-                </li>
-            </ul>
+            <div class="row">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a class="navbar-link" href="{{ path('homepage') }}">Home</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="{{ path('projects', {'slug': null}) }}" data-popover="#codeNavPopover">Projects</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="{{ path('page', {'slug': 'approach'}) }}" data-popover="#codeNavPopover">How I (like to) Work</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="{{ path('contact') }}">Get in touch</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     {% endblock %}
@@ -75,18 +86,11 @@
 
 <div class="section footer">
     <div class="container">
-        <p>Gary Straughan - 07834 003 110</p>
-        <!--
-        <p>This website is created with Symfony2</p>
-        <ul>
-            <li>
-                (Mostly) follows the <a href="http://symfony.com/doc/current/best_practices/index.html">Symfony Best Practices<a/>
-            </li>
-            <li>
-                Responsive template: <a href="http://getskeleton.com/">Skeleton</a>
-            </li>
-        </ul>
-        -->
+        <div class="row">
+            <div class="one-half column">
+                <p>Copyright © 1998-{{"now"|date('Y')}} Gary Straughan. All rights reserved.
+            </div>
+        </div>
     </div>
 </div>
 

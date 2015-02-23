@@ -1,13 +1,13 @@
 {% extends 'base_skeleton.html.twig' %}
 
 {% block metatitle %}Gary Straughan - Senior PHP / Symfony2 Developer - London{% endblock %}
+{% block metadescription %}Recent projects: The Economist, IntuDigital, Sportlobster, BBC Worldwide, British Gas, Google.{% endblock %}
+
+
 {% block title %}
-    PHP + Symfony2 + Contract + Agile + London = Gary&nbsp;Straughan
-    <br />
+    <h1 class="title">PHP + Symfony2 + Contract + Agile + London = Gary&nbsp;Straughan</h1>
     <a class="button button-primary" href="{{ path('contact') }}">Get in touch</a>
-
     <p><span>Available mid-April 2015</span></p>
-
 {% endblock %}
 
 {% block navigation %}{% endblock %}
@@ -16,11 +16,14 @@
 
     <div class="section projects">
         <div class="container">
+            <h2>Recent Projects</h2>
+
+
             <div class="row">
                 {% for project in projects %}
-                    <div class="four columns value-prop center">
-                        <img src="/images/logos/{{ project.slug }}.png" />
-                        <p><strong>{{ project.company }}</strong> - {{ project.summary }} <a href="{{ path('projects', {'slug': project.slug}) }}">More...</a></p>
+                    <div class="four columns center">
+                        <img src="/images/logos/{{ project.slug }}_centered.png" alt="{{ project.company }}"  />
+                        <p><strong>{{ project.company }}</strong> - {{ project.summary }} {% if project.content %}<a href="{{ path('projects', {'slug': project.slug}) }}">More...</a>{% endif %}</p>
                     </div>
                 {%  endfor %}
             </div>
@@ -32,10 +35,13 @@
 
     <div class="section skills">
         <div class="container">
+
+            <h2>Skills</h2>
+
             <div class="row">
                 {% for skill in skills %}
                     <div class="three columns">
-                        <h4>{{ skill.title }}</h4>
+                        <h3>{{ skill.title }}</h3>
                         <p>{{ skill.content }}</p>
                     </div>
                 {% endfor %}

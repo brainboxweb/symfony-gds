@@ -1,6 +1,6 @@
 {% extends 'base_skeleton.html.twig' %}
 
-{% block title %}Get in touch{% endblock %}
+{% block title %}<h1 class="title">Get in touch</h1>{% endblock %}
 
 {% block body %}
     <div class="container">
@@ -23,6 +23,32 @@
                 {{ form_widget(form) }}
                 <input type="submit" value="Contact" class="button button-primary pull-right" />
                 {{ form_end(form) }}
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="six columns">
+
+                <h3>Contact address</h3>
+                <p>BRAINBOX Webtech Limited<br />
+                Oxford Road South<br />
+                Chiswick<br />
+                London W4 3DD</p>
+            </div>
+
+            <div class="six columns">
+
+                <h3>Registered office</h3>
+                <p>BRAINBOX Webtech Limited is Registered in England and Wales<br />
+                Company registration number: 7404796<br />
+                c/o Deacon’s Chartered Accountants & Registered Auditors<br />
+                The Stables<br />
+                Shipton Bridge Farm<br />
+                Widdington<br />
+                Saffron Walden<br />
+                Essex CB11 3SU</p>
+
             </div>
         </div>
     </div>
