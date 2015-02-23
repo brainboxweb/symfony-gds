@@ -116,6 +116,37 @@ For **prod** environment, run this:
 
 
 
+Doctrine Migrations
+----
+
+php composer.phar update
+
+```
+#composer.json
+{
+    "require": {
+        "doctrine/migrations": "1.0.*@dev",
+        "doctrine/doctrine-migrations-bundle": "2.1.*@dev"
+    }
+}
+
+```
+
+
+
+```
+// app/AppKernel.php
+public function registerBundles()
+{
+    $bundles = array(
+        //...
+        new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+    );
+}
+```
+
+
+
   [1]: http://symfony.com/blog/introducing-the-official-symfony-best-practices "Introducing the Official Symfony Best Practices"
   [2]: http://symfony.com/doc/current/best_practices/index.html "Symfony Best Practices"
   [3]: http://getskeleton.com/ "Skeleton: Responsive CSS Boilerplate"
