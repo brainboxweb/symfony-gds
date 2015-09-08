@@ -43,9 +43,20 @@ monolog:
 
 doctrine:
     dbal:
-        dbname:   "gds"
-        user:     "gds"
-        password: "123"
+        host: mysql
+        dbname: gds
+        user: admin
+        password: password
+
+
+
+         # if using pdo_sqlite as your database driver:
+                #   1. add the path in parameters.yml
+                #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+                #   2. Uncomment database_path in parameters.yml.dist
+                #   3. Uncomment next line:
+                #     path:     "%database_path%"
+
 
 
 assetic:

@@ -30,7 +30,13 @@ class DefaultController extends Controller
         $skills[] = array('title' => 'Frameworks', 'content' => 'Symfony2, Silex, Zend (BBC), CodeIgniter');
         $skills[] = array('title' => 'Services', 'content' => 'Elasticsearch, Apache Solr, Memcached, Varnish');
         $skills[] = array('title' => 'Test', 'content' => 'Behat, PHPUnit, phpspec');
-        $skills[] = array('title' => 'Agile', 'content' => 'Scrum, Kanban');
+        $skills[] = array('title' => 'Agile', 'content' => 'Scrum, Kanban, Wiremock');
+
+        //Vagrant, Docker
+        //Go
+        //Wiremock
+        //
+
 
         return $this->render('default/index.html.twig', array(
             'projects' => $projects,

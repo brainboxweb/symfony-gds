@@ -1,5 +1,7 @@
 {% extends 'base_skeleton.html.twig' %}
 
+{% set available = '2015-10-01' %}
+
 {% block metatitle %}Gary Straughan - Senior PHP / Symfony2 Developer - London{% endblock %}
 {% block metadescription %}Recent projects: The Economist, IntuDigital, Sportlobster, BBC Worldwide, British Gas, Google.{% endblock %}
 
@@ -7,12 +9,34 @@
 {% block title %}
     <h1 class="title">PHP + Symfony2 + Contract + Agile + London = Gary&nbsp;Straughan</h1>
     <a class="button button-primary" href="{{ path('contact') }}">Get in touch</a>
-    <p><span>Available May 2015</span></p>
+    <p>
+        {% if available|date("Y-m-d") >= "now"|date("Y-m-d") %}
+            <span>Available {{ available|date("F Y") }}</span>
+        {% else %}
+            <span>Available {{ "now"|date_modify("+1 month")|date("F Y") }}</span>
+        {% endif %}
+    </p>
 {% endblock %}
 
 {% block navigation %}{% endblock %}
 
 {% block body %}
+
+
+    <div class="section skills">
+        <div class="container">
+
+            <h2>NEW: "Development That Pays"</h2>
+
+            <div class="row">
+                "Development That Pays" is a weekly video that offers an "insider view" of what's working now
+                in Software Development. Check it out!
+            </div>
+            <div class="row center">
+                <a class="button button-primary" href="http://www.developmentthatpays.com">Development That Pays</a>
+            </div>
+        </div>
+    </div>
 
     <div class="section projects">
         <div class="container">
