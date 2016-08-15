@@ -1,10 +1,13 @@
 <?php
 
+
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
 
-
 date_default_timezone_set('Europe/London');
+
+
 
 
 // If you don't want to setup permissions the proper way, just uncomment the following PHP line
@@ -24,6 +27,7 @@ date_default_timezone_set('Europe/London');
 $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 Debug::enable();
 
+
 require_once __DIR__.'/../app/AppKernel.php';
 
 $kernel = new AppKernel('dev', true);
@@ -32,3 +36,5 @@ $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
+die("end");
+

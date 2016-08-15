@@ -1,4 +1,5 @@
 WEB_CONTAINER=gds_front_1
+MYSQL_CONTAINER=gds_mysql_1
 BEHAT_FLAGS=--stop-on-failure
 PHPUNIT_FLAGS=--stop-on-failure
 
@@ -17,6 +18,9 @@ docker-reset:       ## Kill all containers
 
 bash:               ## Run /bin/bash
 	docker exec -it ${WEB_CONTAINER} /bin/bash
+
+sql:               ## Run
+	docker exec -it ${MYSQL_CONTAINER} mysql -u root -ppassword gds
 
 tail-log:
 	docker exec -it ${WEB_CONTAINER} tail -f ${LOG_FILE}
@@ -49,3 +53,7 @@ db-create:          ## Create database
 
 db-migrate:          ## Run Doctrine Migrations
 	docker exec -it ${WEB_CONTAINER} php /var/www/gds/app/console doctrine:migrations:migrate
+
+
+
+	insert into Project (id, company, url, slug, summary, startDate, role) values (157, "Sainsbury's Digital", "http://www.sainsburys.co.uk", "sainsburys", "[to follow]", "2015-10-01", "Golang Developer");

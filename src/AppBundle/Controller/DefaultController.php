@@ -22,15 +22,15 @@ class DefaultController extends Controller
     {
         $projects = $this->getDoctrine()
             ->getRepository('AppBundle:Project')
-            ->findBy(array('slug' => array('economist', 'intu_digital', 'bbc_worldwide')), array('startDate'=>'DESC') )
+            ->findBy(array('slug' => array('sainsburys', 'economist', 'bbc_worldwide')), array('startDate'=>'DESC') )
         ;
 
         $skills = array();
 //        $skills[] = array('title' => 'Coding', 'content' => 'PHP5 OO, MySQL, HTML5, CSS3, XML, JavaScript/jQuery, JSON, AJAX');
         $skills[] = array('title' => 'Frameworks', 'content' => 'Symfony2, Silex, Zend (BBC), CodeIgniter');
         $skills[] = array('title' => 'Services', 'content' => 'Elasticsearch, Apache Solr, Memcached, Varnish');
-        $skills[] = array('title' => 'Test', 'content' => 'Behat, PHPUnit, phpspec');
-        $skills[] = array('title' => 'Agile', 'content' => 'Scrum, Kanban, Wiremock');
+        $skills[] = array('title' => 'Test', 'content' => 'Behat, PHPUnit, phpspec, Wiremock, Selenium');
+        $skills[] = array('title' => 'Agile', 'content' => 'Scrum, Kanban');
 
         //Vagrant, Docker
         //Go

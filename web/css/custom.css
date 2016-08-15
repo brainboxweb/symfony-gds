@@ -295,13 +295,13 @@ body.projects .projects a:hover {
     padding: 4rem;
 }
 
-
-.skills {
+body.home .projects,
+body.home .dtp
+{
     color: #fff;
     background-image: url('/images/backgrounds/blue-tech.jpg');
     padding: 5rem;
 }
-
 
 .project .datasheet {
     color: #fff;

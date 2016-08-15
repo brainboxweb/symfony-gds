@@ -147,6 +147,23 @@ public function registerBundles()
 
 
 
+Docker
+------
+
+```
+docker-compose up
+```
+
+Fix  permissions for app/logs, app.cache
+
+```
+chown -R 1000 /var/www/gds/app/logs
+chmod -R 777 /var/www/gds/app/logs
+chown -R 1000 /var/www/gds/app/logs
+chmod -R 777 /var/www/gds/app/logs
+
+```
+
   [1]: http://symfony.com/blog/introducing-the-official-symfony-best-practices "Introducing the Official Symfony Best Practices"
   [2]: http://symfony.com/doc/current/best_practices/index.html "Symfony Best Practices"
   [3]: http://getskeleton.com/ "Skeleton: Responsive CSS Boilerplate"

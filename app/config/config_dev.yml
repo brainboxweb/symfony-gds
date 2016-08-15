@@ -45,7 +45,7 @@ doctrine:
     dbal:
         host: mysql
         dbname: gds
-        user: admin
+        user: root
         password: password
 
 
